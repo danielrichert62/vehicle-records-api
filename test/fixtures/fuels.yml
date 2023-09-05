@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fill_date: 2023-09-05
+  mileage: 1
+  cost_per_gallon: 9.99
+  location: MyString
+  gallons: 9.99
+  vehicle: one
+
+two:
+  fill_date: 2023-09-05
+  mileage: 1
+  cost_per_gallon: 9.99
+  location: MyString
+  gallons: 9.99
+  vehicle: two
