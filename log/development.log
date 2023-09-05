@@ -369,3 +369,223 @@ Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 904)
   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mFuel Load (0.9ms)[0m  [1m[34mSELECT "fuels".* FROM "fuels"[0m
   [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+Started GET "/users.json" for ::1 at 2023-09-05 15:50:43 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users.json"):
+  
+Started GET "/users.json" for ::1 at 2023-09-05 15:50:44 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users.json"):
+  
+Started GET "/users.json" for ::1 at 2023-09-05 15:51:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users.json"):
+  
+Started GET "/users.json" for ::1 at 2023-09-05 15:51:37 -0500
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users.json" for ::1 at 2023-09-05 15:52:55 -0500
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/users.json" for ::1 at 2023-09-05 15:55:24 -0500
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendered collection of users/_user.json.jbuilder [0 times] (Duration: 0.1ms | Allocations: 42)
+  Rendered users/index.json.jbuilder (Duration: 1.7ms | Allocations: 440)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 1367)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-05 15:56:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vehicles.json"):
+  
+Started GET "/vehicles.json" for ::1 at 2023-09-05 15:56:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vehicles.json"):
+  
+Started GET "/vehicles.json" for ::1 at 2023-09-05 15:56:49 -0500
+  
+ActionController::RoutingError (uninitialized constant VehiclesController):
+  
+Started GET "/vehicles.json" for ::1 at 2023-09-05 16:03:50 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [2 times] (Duration: 1.1ms | Allocations: 1338)
+  Rendered vehicles/index.json.jbuilder (Duration: 88.0ms | Allocations: 9878)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 68.8ms | Allocations: 11182)
+
+
+  
+ActionView::Template::Error (undefined method `vehicle_url' for #<ActionView::Base:0x000000000252d8>):
+    1: json.extract! vehicle, :id, :created_at, :updated_at
+    2: json.url vehicle_url(vehicle, format: :json)
+  
+app/views/vehicles/_vehicle.json.jbuilder:2
+app/views/vehicles/index.json.jbuilder:1
+Started GET "/vehicles.json" for ::1 at 2023-09-05 16:04:15 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [2 times] (Duration: 0.5ms | Allocations: 129)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.1ms | Allocations: 1074)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.3ms | Allocations: 2068)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-05 16:06:18 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [2 times] (Duration: 0.5ms | Allocations: 163)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.1ms | Allocations: 1305)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 2290)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-05 16:08:05 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [2 times] (Duration: 1.1ms | Allocations: 156)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.9ms | Allocations: 1221)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 2210)
+
+
+Started GET "/fuels.json" for ::1 at 2023-09-05 16:08:14 -0500
+Processing by FuelsController#index as JSON
+  Rendering fuels/index.json.jbuilder
+  Rendered collection of fuels/_fuel.json.jbuilder [0 times] (Duration: 0.0ms | Allocations: 15)
+  Rendered fuels/index.json.jbuilder (Duration: 0.8ms | Allocations: 277)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 903)
+
+
+Started GET "/fuels.json" for ::1 at 2023-09-05 16:08:22 -0500
+Processing by FuelsController#index as JSON
+  Rendering fuels/index.json.jbuilder
+  Rendered collection of fuels/_fuel.json.jbuilder [0 times] (Duration: 0.1ms | Allocations: 15)
+  Rendered fuels/index.json.jbuilder (Duration: 0.4ms | Allocations: 121)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 420)
+
+
+Started GET "/fuels.json" for ::1 at 2023-09-05 16:11:45 -0500
+Processing by FuelsController#index as JSON
+  Rendering fuels/index.json.jbuilder
+  [1m[36mFuel Load (24.1ms)[0m  [1m[34mSELECT "fuels".* FROM "fuels"[0m
+  ↳ app/views/fuels/index.json.jbuilder:1
+  Rendered collection of fuels/_fuel.json.jbuilder [6 times] (Duration: 1.8ms | Allocations: 414)
+  Rendered fuels/index.json.jbuilder (Duration: 43.6ms | Allocations: 6543)
+Completed 200 OK in 48ms (Views: 16.7ms | ActiveRecord: 27.7ms | Allocations: 8282)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-05 16:12:31 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [2 times] (Duration: 0.2ms | Allocations: 92)
+  Rendered vehicles/index.json.jbuilder (Duration: 7.2ms | Allocations: 2622)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 2.7ms | Allocations: 3523)
+
+
+Started GET "/users.json" for ::1 at 2023-09-05 16:12:50 -0500
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendered collection of users/_user.json.jbuilder [0 times] (Duration: 0.1ms | Allocations: 15)
+  Rendered users/index.json.jbuilder (Duration: 0.9ms | Allocations: 269)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 897)
+
+
+Started GET "/users.json" for ::1 at 2023-09-05 16:12:53 -0500
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendered collection of users/_user.json.jbuilder [0 times] (Duration: 0.0ms | Allocations: 15)
+  Rendered users/index.json.jbuilder (Duration: 0.3ms | Allocations: 121)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 421)
+
+
+Started GET "/users.json" for ::1 at 2023-09-05 16:13:35 -0500
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered collection of users/_user.json.jbuilder [2 times] (Duration: 0.9ms | Allocations: 1254)
+  Rendered users/index.json.jbuilder (Duration: 10.5ms | Allocations: 5089)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.4ms | Allocations: 6183)
+
+
+  
+ActionView::Template::Error (undefined method `user_url' for #<ActionView::Base:0x0000000002d2f8>):
+    1: json.extract! user, :id, :created_at, :updated_at
+    2: json.url user_url(user, format: :json)
+  
+app/views/users/_user.json.jbuilder:2
+app/views/users/index.json.jbuilder:1
+Started GET "/users.json" for ::1 at 2023-09-05 16:15:08 -0500
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered collection of users/_user.json.jbuilder [2 times] (Duration: 1.6ms | Allocations: 1494)
+  Rendered users/index.json.jbuilder (Duration: 4.3ms | Allocations: 2416)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 3375)
+
+
+  
+ActionView::Template::Error (undefined method `password' for #<User id: 1, email: "dan@example.com", name: "Dan Example", password_digest: nil, created_at: "2023-09-05 20:37:55.355809000 +0000", updated_at: "2023-09-05 20:37:55.355809000 +0000">):
+    1: # json.extract! user, :id, :created_at, :updated_at
+    2: # json.url user_url(user, format: :json)
+    3: json.extract! user, :id, :email, :name, :password, :vehicle_id, :created_at, :updated_at
+  
+app/views/users/_user.json.jbuilder:3
+app/views/users/index.json.jbuilder:1
+Started GET "/users.json" for ::1 at 2023-09-05 16:15:23 -0500
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered collection of users/_user.json.jbuilder [2 times] (Duration: 1.2ms | Allocations: 1360)
+  Rendered users/index.json.jbuilder (Duration: 3.9ms | Allocations: 2281)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 3241)
+
+
+  
+ActionView::Template::Error (undefined method `password' for #<User id: 1, email: "dan@example.com", name: "Dan Example", password_digest: nil, created_at: "2023-09-05 20:37:55.355809000 +0000", updated_at: "2023-09-05 20:37:55.355809000 +0000">):
+    1: # json.extract! user, :id, :created_at, :updated_at
+    2: # json.url user_url(user, format: :json)
+    3: json.extract! user, :id, :email, :name, :password, :created_at, :updated_at
+  
+app/views/users/_user.json.jbuilder:3
+app/views/users/index.json.jbuilder:1
+Started GET "/users.json" for ::1 at 2023-09-05 16:15:36 -0500
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered collection of users/_user.json.jbuilder [2 times] (Duration: 0.6ms | Allocations: 1277)
+  Rendered users/index.json.jbuilder (Duration: 2.3ms | Allocations: 2018)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 2312)
+
+
+  
+ActionView::Template::Error (undefined method `password' for #<User id: 1, email: "dan@example.com", name: "Dan Example", password_digest: nil, created_at: "2023-09-05 20:37:55.355809000 +0000", updated_at: "2023-09-05 20:37:55.355809000 +0000">):
+    1: # json.extract! user, :id, :created_at, :updated_at
+    2: # json.url user_url(user, format: :json)
+    3: json.extract! user, :id, :email, :name, :password, :created_at, :updated_at
+  
+app/views/users/_user.json.jbuilder:3
+app/views/users/index.json.jbuilder:1
+Started GET "/users.json" for ::1 at 2023-09-05 16:17:18 -0500
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered collection of users/_user.json.jbuilder [2 times] (Duration: 0.5ms | Allocations: 156)
+  Rendered users/index.json.jbuilder (Duration: 2.6ms | Allocations: 1207)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 2197)
+
+
