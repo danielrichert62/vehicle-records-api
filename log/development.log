@@ -366,3 +366,6 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 904)
 
 
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mFuel Load (0.9ms)[0m  [1m[34mSELECT "fuels".* FROM "fuels"[0m
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
