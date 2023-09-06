@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   # FUEL RECORD Routes
   get "/fuels" => "fuels#index"
   post "/fuels" => "fuels#create"
+  delete "/fuels/:id" => "fuels#destroy"
 end

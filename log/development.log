@@ -589,3 +589,41 @@ Processing by UsersController#index as JSON
 Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 2197)
 
 
+Started GET "/" for ::1 at 2023-09-06 09:30:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 490)
+Completed 200 OK in 17ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 4260)
+
+
+Started GET "/users.json" for ::1 at 2023-09-06 09:30:25 -0500
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (40.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered collection of users/_user.json.jbuilder [2 times] (Duration: 1.7ms | Allocations: 288)
+  Rendered users/index.json.jbuilder (Duration: 61.6ms | Allocations: 6330)
+Completed 200 OK in 70ms (Views: 17.9ms | ActiveRecord: 48.5ms | Allocations: 8073)
+
+
+Started GET "/fuels.json" for ::1 at 2023-09-06 09:32:03 -0500
+Processing by FuelsController#index as JSON
+  Rendering fuels/index.json.jbuilder
+  [1m[36mFuel Load (41.3ms)[0m  [1m[34mSELECT "fuels".* FROM "fuels"[0m
+  ↳ app/views/fuels/index.json.jbuilder:1
+  Rendered collection of fuels/_fuel.json.jbuilder [6 times] (Duration: 2.1ms | Allocations: 412)
+  Rendered fuels/index.json.jbuilder (Duration: 58.8ms | Allocations: 6627)
+Completed 200 OK in 67ms (Views: 16.1ms | ActiveRecord: 45.8ms | Allocations: 8287)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 09:32:14 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [2 times] (Duration: 1.0ms | Allocations: 176)
+  Rendered vehicles/index.json.jbuilder (Duration: 13.3ms | Allocations: 4252)
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 2.9ms | Allocations: 5285)
+
+
