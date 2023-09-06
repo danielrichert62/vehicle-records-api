@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   get "/fuels" => "fuels#index"
   post "/fuels" => "fuels#create"
   delete "/fuels/:id" => "fuels#destroy"
+
+  # SESSIONS Routes
+  post "/sessions" => "sessions#create"
 end
