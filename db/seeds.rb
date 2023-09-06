@@ -20,8 +20,8 @@ Fuel.create!([
 ])
 
 User.create!([
-  { email: "dan@example.com", name: "Dan Example" },
-  { email: "mike@example.com", name: "Mike Example" },
+  { email: "dan@example.com", name: "Dan Example", password_digest: "$2a$12$ggKAL0Ja.MbnZWP4OgQc4eBxBE6tE2CXxLw1Y7MgQoz0AYa/Bh.tW" },
+  { email: "mike@example.com", name: "Mike Example", password_digest: "$2a$12$/urmKU1wb1TydNESDbXjbOkezpI734OXJ7FeYL7uHvephj89EbVUW" },
 ])
 
 # Maintenance.create!([

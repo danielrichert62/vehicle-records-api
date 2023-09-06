@@ -5,6 +5,7 @@ class FuelsController < ApplicationController
 
   def create
     @fuel = Fuel.new(
+      user_id: current_user.id,
       fill_date: params[:fill_date],
       mileage: params[:mileage],
       cost_per_gallon: params[:cost_per_gallon],

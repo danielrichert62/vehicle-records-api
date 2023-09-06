@@ -1,23 +1,22 @@
 Rails.application.routes.draw do
-  # get 'user/new'
-  # get 'user/create'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-  # USER Routes
-  get "/users" => "users#index"
   post "/users" => "users#create"
+  delete "/users/:id" => "users#destroy"
 
   # VEHICLE Routes
   get "/vehicles" => "vehicles#index"
   post "/vehicles" => "vehicles#create"
+  #delete "/vehicles/:id" => "vehicles#destroy"
 
   # FUEL RECORD Routes
   get "/fuels" => "fuels#index"
   post "/fuels" => "fuels#create"
-  delete "/fuels/:id" => "fuels#destroy"
+  #delete "/fuels/:id" => "fuels#destroy"
 
   # SESSIONS Routes
+  get "/login" => "sessions#new"
   post "/sessions" => "sessions#create"
+  get "/logout" => "sessions#destroy"
+
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
 end
