@@ -2105,3 +2105,350 @@ Processing by VehiclesController#create as JSON
 Completed 422 Unprocessable Entity in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1620)
 
 
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:08:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.7ms | Allocations: 322)
+  Rendered vehicles/index.json.jbuilder (Duration: 15.1ms | Allocations: 6158)
+Completed 200 OK in 40ms (Views: 16.3ms | ActiveRecord: 3.8ms | Allocations: 12556)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:08:18 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.8ms | Allocations: 182)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.0ms | Allocations: 1322)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 2298)
+
+
+Started POST "/users.json" for ::1 at 2023-09-06 16:08:44 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Joe", "email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1690)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/users_controller.rb:33:in `create'
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:16:40 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 32.8ms | Allocations: 3945)
+Completed 200 OK in 35ms (Views: 13.6ms | ActiveRecord: 19.9ms | Allocations: 4257)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:16:40 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.5ms | Allocations: 1052)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 1352)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:16:50 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.3ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 8.5ms | Allocations: 1059)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 1.4ms | Allocations: 1365)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:16:50 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 11.0ms | Allocations: 1052)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.0ms | Allocations: 1352)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-06 16:17:03 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (41.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:24:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 280ms (ActiveRecord: 49.6ms | Allocations: 5621)
+
+
+Started GET "/" for ::1 at 2023-09-06 16:17:03 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 280)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 989)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:17:04 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 1.0ms | Allocations: 182)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.4ms | Allocations: 1321)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 2296)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:17:04 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.5ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.6ms | Allocations: 1052)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1353)
+
+
+Started POST "/users.json" for ::1 at 2023-09-06 16:19:47 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Joe", "email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 462)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/users_controller.rb:33:in `create'
+Started POST "/vehicles.json?year=2018&make=Lexus&model=RX350" for ::1 at 2023-09-06 16:30:07 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Lexus", "model"=>"RX350"}
+Completed 422 Unprocessable Entity in 68ms (Views: 0.2ms | ActiveRecord: 47.5ms | Allocations: 9298)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:33:19 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (41.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.3ms | Allocations: 116)
+  Rendered vehicles/index.json.jbuilder (Duration: 44.5ms | Allocations: 1202)
+Completed 200 OK in 47ms (Views: 3.8ms | ActiveRecord: 41.7ms | Allocations: 1753)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:33:24 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.6ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.5ms | Allocations: 1052)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.3ms | Allocations: 1352)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:33:24 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.8ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 4.4ms | Allocations: 1052)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 1352)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:34:35 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.0ms | Allocations: 1052)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1352)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:39:02 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.5ms | Allocations: 1058)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1362)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:39:05 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (6.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.3ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 10.9ms | Allocations: 1052)
+Completed 200 OK in 13ms (Views: 5.5ms | ActiveRecord: 6.4ms | Allocations: 1352)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:39:05 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 11.8ms | Allocations: 1052)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.4ms | Allocations: 1354)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:43:15 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 1.7ms | Allocations: 1052)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:43:57 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.3ms | Allocations: 1052)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:45:12 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.1ms | Allocations: 1052)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:45:12 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.6ms | Allocations: 1052)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:46:36 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.2ms | Allocations: 1052)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1354)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:47:07 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.6ms | Allocations: 1052)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:47:40 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.4ms | Allocations: 1052)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:48:26 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.5ms | Allocations: 1052)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:52:49 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.2ms | Allocations: 1052)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:52:49 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.3ms | Allocations: 1052)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:55:09 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 2.3ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 33.2ms | Allocations: 1052)
+Completed 200 OK in 45ms (Views: 38.0ms | ActiveRecord: 0.8ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 16:55:10 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.5ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.5ms | Allocations: 1052)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.8ms | Allocations: 1353)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-06 17:00:03 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (43.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 354ms (Views: 0.3ms | ActiveRecord: 43.6ms | Allocations: 2667)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 17:00:04 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 1.5ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 8.2ms | Allocations: 1052)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.4ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 17:00:04 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (2.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 8.5ms | Allocations: 1052)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 2.2ms | Allocations: 1353)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-06 17:00:23 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"Mustang"}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 984)
+
+
