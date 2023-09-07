@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_07_004435) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_07_183643) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_004435) do
     t.bigint "vehicle_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["vehicle_id"], name: "index_fuels_on_vehicle_id"
   end
 
@@ -33,6 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_004435) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "vehicle_id"
+    t.boolean "admin", default: false
   end
 
   create_table "vehicles", force: :cascade do |t|
@@ -41,6 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_07_004435) do
     t.string "model"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.text "image_url"
   end
 
   add_foreign_key "fuels", "vehicles"

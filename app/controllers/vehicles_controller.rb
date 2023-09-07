@@ -1,14 +1,28 @@
 class VehiclesController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
+  def show
+    @vehicle = Vehicle.find_by(id: params["id"])
+    render :show
+  end
+
   def index
     @vehicles = Vehicle.all
+
+    if current_user
+      @vehicles = current_user.vehicles
+      render :index #template: "vehicle/index"
+    else
+      render json: { message: "Please Log in to see the vehicles" }, status: :unauthorized
+    end
   end
 
   def create
-    @vehicle = Vehicle.new(
+    @vehicle = Vehicle.create(
+      user_id: current_user.id,
       year: params[:year],
       make: params[:make],
       model: params[:model],
-
     )
     if @vehicle.save #happy path
       render :show

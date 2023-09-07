@@ -2716,3 +2716,1384 @@ Processing by VehiclesController#index as JSON
 Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 1353)
 
 
+Started GET "/vehicles.json" for ::1 at 2023-09-07 09:11:29 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.9ms | Allocations: 322)
+  Rendered vehicles/index.json.jbuilder (Duration: 15.8ms | Allocations: 6157)
+Completed 200 OK in 44ms (Views: 17.5ms | ActiveRecord: 4.3ms | Allocations: 12554)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 09:11:29 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.5ms | Allocations: 182)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.8ms | Allocations: 1322)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 2298)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 09:15:28 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (47.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 316ms (Views: 0.2ms | ActiveRecord: 50.7ms | Allocations: 7338)
+
+
+Started POST "/users.json?name=test&password=[FILTERED]" for ::1 at 2023-09-07 09:17:21 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"test", "password"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 400 Bad Request in 253ms (Views: 0.2ms | ActiveRecord: 8.5ms | Allocations: 3827)
+
+
+Started POST "/users.json?email=test%40example.com&password=[FILTERED]" for ::1 at 2023-09-07 09:17:28 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"email"=>"test@example.com", "password"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (11.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at", "vehicle_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "test@example.com"], ["name", nil], ["password_digest", "[FILTERED]"], ["created_at", "2023-09-07 14:17:29.199652"], ["updated_at", "2023-09-07 14:17:29.199652"], ["vehicle_id", nil]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 201 Created in 256ms (Views: 0.1ms | ActiveRecord: 13.0ms | Allocations: 4279)
+
+
+Started DELETE "/users/3.json?name=test&email=test%40example.com" for ::1 at 2023-09-07 09:18:19 -0500
+Processing by UsersController#destroy as JSON
+  Parameters: {"name"=>"test", "email"=>"test@example.com", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:47:in `destroy'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1490)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/users_controller.rb:48:in `destroy'
+Started GET "/vehicles.json?email=dan%40example.com&password=[FILTERED]" for ::1 at 2023-09-07 09:28:13 -0500
+Processing by VehiclesController#index as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.5ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 25.3ms | Allocations: 3937)
+Completed 200 OK in 26ms (Views: 9.6ms | ActiveRecord: 16.4ms | Allocations: 4243)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 09:34:05 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 242ms (Views: 0.2ms | ActiveRecord: 6.7ms | Allocations: 3575)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 09:34:05 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (36.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.3ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 40.9ms | Allocations: 1052)
+Completed 200 OK in 43ms (Views: 4.8ms | ActiveRecord: 36.8ms | Allocations: 1352)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 09:34:05 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 4.7ms | Allocations: 1052)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.7ms | Allocations: 1352)
+
+
+Started POST "/users.json" for ::1 at 2023-09-07 09:38:41 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Joe", "email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 400 Bad Request in 240ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 3076)
+
+
+Started POST "/users.json" for ::1 at 2023-09-07 09:39:19 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Joey", "email"=>"joey@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joey@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at", "vehicle_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "joey@example.com"], ["name", "Joey"], ["password_digest", "[FILTERED]"], ["created_at", "2023-09-07 14:39:19.372923"], ["updated_at", "2023-09-07 14:39:19.372923"], ["vehicle_id", nil]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 201 Created in 245ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 2969)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 09:39:19 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 14.9ms | Allocations: 1052)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 1.2ms | Allocations: 1352)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 09:39:19 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (37.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 68.5ms | Allocations: 1052)
+Completed 200 OK in 71ms (Views: 31.6ms | ActiveRecord: 37.8ms | Allocations: 1354)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 09:39:38 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"joey@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joey@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 237ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 734)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 09:39:39 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (54.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.6ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 61.7ms | Allocations: 1052)
+Completed 200 OK in 66ms (Views: 8.5ms | ActiveRecord: 54.2ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 09:39:39 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (7.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 1.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 21.4ms | Allocations: 1055)
+Completed 200 OK in 23ms (Views: 14.8ms | ActiveRecord: 7.4ms | Allocations: 1356)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 09:40:37 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Acura", "model"=>"MDX"}
+Completed 422 Unprocessable Entity in 26ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 10189)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 09:54:52 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Acura", "model"=>"MDX"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `current_user'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 8.6ms | Allocations: 10201)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Vehicle.):
+  
+app/controllers/vehicles_controller.rb:7:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 09:57:30 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Acura", "model"=>"MDX"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `current_user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1112)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Vehicle.):
+  
+app/controllers/vehicles_controller.rb:7:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 09:58:51 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 456)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:8:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:01:33 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 422 Unprocessable Entity in 17ms (Views: 0.1ms | ActiveRecord: 5.5ms | Allocations: 5699)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToFuels (20230907150435)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (31.8ms)[0m  [1m[35mALTER TABLE "fuels" ADD "user_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230907150435"]]
+  [1m[36mTRANSACTION (34.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserIdToVehicles (20230907150449)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "user_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230907150449"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:10:49 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3788)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:13:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:13:23 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1546)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:13:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:14:37 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 455)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:13:in `create'
+Started POST "/sessions.json?email=dan%40example.com&password=[FILTERED]" for ::1 at 2023-09-07 10:14:49 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 256ms (Views: 0.3ms | ActiveRecord: 4.6ms | Allocations: 8808)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:15:41 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 456)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:13:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:22:57 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1545)
+
+
+  
+NoMethodError (undefined method `vehicle' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:13:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:23:26 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1599)
+
+
+  
+NoMethodError (undefined method `vehicles' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:13:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:26:50 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1544)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:13:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:32:14 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1544)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:19:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:34:16 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1544)
+
+
+  
+NoMethodError (undefined method `vehicles' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:19:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:35:22 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 422 Unprocessable Entity in 66ms (Views: 0.3ms | ActiveRecord: 38.6ms | Allocations: 11911)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:38:10 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1535)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:19:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddAdminToUsers (20230907154613)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (47.1ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean DEFAULT FALSE[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230907154613"]]
+  [1m[36mTRANSACTION (41.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:49:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/dan/Actualize/vehicle-records-api/app/controllers/application_controller.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+  before_action: authenticate_user
+               ^
+):
+  
+app/controllers/application_controller.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/controllers/application_controller.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/controllers/application_controller.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/controllers/vehicles_controller.rb:1:in `<main>'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:51:47 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1544)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:19:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 10:52:13 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 422 Unprocessable Entity in 52ms (Views: 0.1ms | ActiveRecord: 41.4ms | Allocations: 6499)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:02:51 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 422 Unprocessable Entity in 107ms (Views: 0.1ms | ActiveRecord: 13.6ms | Allocations: 4177)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:03:00 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1399)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:10:31 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Acura", "model"=>"MDX"}
+Completed 422 Unprocessable Entity in 19ms (Views: 0.1ms | ActiveRecord: 8.7ms | Allocations: 4120)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:22:59 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 422 Unprocessable Entity in 77ms (Views: 0.1ms | ActiveRecord: 67.5ms | Allocations: 4123)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:23:08 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1399)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:24:24 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 230)
+
+
+Started POST "/sessions.json?email=dan%40example.com&password=[FILTERED]" for ::1 at 2023-09-07 11:25:08 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 370ms (Views: 0.2ms | ActiveRecord: 95.2ms | Allocations: 5721)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:25:50 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 118)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:27:25 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 222)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 11:35:52 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 322ms (Views: 0.4ms | ActiveRecord: 60.3ms | Allocations: 7698)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 11:35:53 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.9ms | Allocations: 6476)
+
+
+  
+ActionView::MissingTemplate (Missing template vehicle/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/dan/Actualize/vehicle-records-api/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.7.2/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.7.2/app/views"
+):
+  
+app/controllers/vehicles_controller.rb:14:in `index'
+Started GET "/vehicles.json" for ::1 at 2023-09-07 11:35:54 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 1816)
+
+
+  
+ActionView::MissingTemplate (Missing template vehicle/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/dan/Actualize/vehicle-records-api/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.7.2/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.7.2/app/views"
+):
+  
+app/controllers/vehicles_controller.rb:14:in `index'
+Started POST "/sessions.json" for ::1 at 2023-09-07 11:39:09 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 333ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 734)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:40:03 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:40:55 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 220)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 11:41:07 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 10ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1344)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:44:29 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 222)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:44:46 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2020", "make"=>"Toyota", "model"=>"Tundra"}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 221)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 11:45:11 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1447)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 11:47:01 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 266ms (Views: 0.2ms | ActiveRecord: 4.2ms | Allocations: 4443)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 11:47:02 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms | Allocations: 2900)
+
+
+  
+ActionView::MissingTemplate (Missing template vehicle/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/dan/Actualize/vehicle-records-api/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.7.2/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.7.2/app/views"
+):
+  
+app/controllers/vehicles_controller.rb:14:in `index'
+Started GET "/vehicles.json" for ::1 at 2023-09-07 11:47:02 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 1826)
+
+
+  
+ActionView::MissingTemplate (Missing template vehicle/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/dan/Actualize/vehicle-records-api/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.7.2/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.7.2/app/views"
+):
+  
+app/controllers/vehicles_controller.rb:14:in `index'
+Started POST "/sessions.json" for ::1 at 2023-09-07 11:49:27 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 238ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 735)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:50:41 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"Mustang"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 16ms (Views: 0.1ms | ActiveRecord: 7.4ms | Allocations: 5055)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:53:43 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"Mustang"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 6ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2529)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 11:55:30 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.4ms | Allocations: 1826)
+
+
+  
+ActionView::MissingTemplate (Missing template vehicle/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/dan/Actualize/vehicle-records-api/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.7.2/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.7.2/app/views"
+):
+  
+app/controllers/vehicles_controller.rb:14:in `index'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 11:55:34 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"Mustang"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 6ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 2526)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 11:59:29 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 11:59:35 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.3ms | Allocations: 1826)
+
+
+  
+ActionView::MissingTemplate (Missing template vehicle/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/dan/Actualize/vehicle-records-api/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.7.2/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.7.2/app/views"
+):
+  
+app/controllers/vehicles_controller.rb:14:in `index'
+Started GET "/vehicles.json" for ::1 at 2023-09-07 11:59:36 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 1824)
+
+
+  
+ActionView::MissingTemplate (Missing template vehicle/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/dan/Actualize/vehicle-records-api/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.7.2/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.7.2/app/views"
+):
+  
+app/controllers/vehicles_controller.rb:14:in `index'
+Started POST "/sessions.json" for ::1 at 2023-09-07 11:59:50 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 257ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 733)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 11:59:50 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms | Allocations: 1824)
+
+
+  
+ActionView::MissingTemplate (Missing template vehicle/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/dan/Actualize/vehicle-records-api/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.7.2/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.7.2/app/views"
+):
+  
+app/controllers/vehicles_controller.rb:14:in `index'
+Started GET "/vehicles.json" for ::1 at 2023-09-07 11:59:51 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms | Allocations: 1824)
+
+
+  
+ActionView::MissingTemplate (Missing template vehicle/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/dan/Actualize/vehicle-records-api/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.7.2/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.7.2/app/views"
+):
+  
+app/controllers/vehicles_controller.rb:14:in `index'
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:12:17 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 49.6ms | Allocations: 4740)
+
+
+  
+ActionView::MissingTemplate (Missing template vehicle/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/dan/Actualize/vehicle-records-api/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.7.2/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.7.2/app/views"
+):
+  
+app/controllers/vehicles_controller.rb:14:in `index'
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:13:04 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 13ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 3816)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 12:13:24 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 255ms (Views: 0.2ms | ActiveRecord: 4.3ms | Allocations: 9317)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:13:25 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.4ms | Allocations: 5020)
+
+
+  
+ActionView::MissingTemplate (Missing template vehicle/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/dan/Actualize/vehicle-records-api/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.7.2/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.7.2/app/views"
+):
+  
+app/controllers/vehicles_controller.rb:14:in `index'
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:13:26 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1839)
+
+
+  
+ActionView::MissingTemplate (Missing template vehicle/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/dan/Actualize/vehicle-records-api/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.7.2/app/views"
+  * "/Users/dan/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.7.2/app/views"
+):
+  
+app/controllers/vehicles_controller.rb:14:in `index'
+Started POST "/sessions.json" for ::1 at 2023-09-07 12:17:30 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 251ms (Views: 0.3ms | ActiveRecord: 3.3ms | Allocations: 4680)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:17:31 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 1.6ms | Allocations: 250)
+  Rendered vehicles/index.json.jbuilder (Duration: 45.0ms | Allocations: 7091)
+Completed 200 OK in 77ms (Views: 38.4ms | ActiveRecord: 21.0ms | Allocations: 11255)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:17:31 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.4ms | Allocations: 52)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.8ms | Allocations: 996)
+Completed 200 OK in 17ms (Views: 4.6ms | ActiveRecord: 1.2ms | Allocations: 2434)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 12:18:02 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"F150"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 3108)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:20:04 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (14.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (19.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.5ms | Allocations: 52)
+  Rendered vehicles/index.json.jbuilder (Duration: 25.0ms | Allocations: 996)
+Completed 200 OK in 78ms (Views: 6.1ms | ActiveRecord: 34.8ms | Allocations: 2436)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 12:20:15 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"F150"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2527)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:20:48 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.6ms | Allocations: 52)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.3ms | Allocations: 996)
+Completed 200 OK in 34ms (Views: 7.6ms | ActiveRecord: 1.2ms | Allocations: 2438)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 12:22:22 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"F150"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 32ms (Views: 0.2ms | ActiveRecord: 8.1ms | Allocations: 10172)
+
+
+Started POST "/users.json" for ::1 at 2023-09-07 12:25:05 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Sam", "email"=>"sam@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sam@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at", "vehicle_id", "admin") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "sam@example.com"], ["name", "Sam"], ["password_digest", "[FILTERED]"], ["created_at", "2023-09-07 17:25:06.095205"], ["updated_at", "2023-09-07 17:25:06.095205"], ["vehicle_id", nil], ["admin", false]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 201 Created in 267ms (Views: 0.3ms | ActiveRecord: 7.9ms | Allocations: 4649)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:25:06 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.3ms | Allocations: 77)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.7ms | Allocations: 1845)
+Completed 200 OK in 18ms (Views: 7.0ms | ActiveRecord: 3.1ms | Allocations: 4014)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:25:06 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.3ms | Allocations: 52)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.5ms | Allocations: 996)
+Completed 200 OK in 14ms (Views: 6.0ms | ActiveRecord: 1.2ms | Allocations: 2435)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 12:25:47 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"F150"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 2527)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:32:40 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.4ms | Allocations: 52)
+  Rendered vehicles/index.json.jbuilder (Duration: 8.5ms | Allocations: 999)
+Completed 200 OK in 145ms (Views: 8.7ms | ActiveRecord: 71.6ms | Allocations: 5370)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:35:21 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.2ms | Allocations: 52)
+  Rendered vehicles/index.json.jbuilder (Duration: 9.0ms | Allocations: 996)
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 0.7ms | Allocations: 2436)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:39:11 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.1ms | Allocations: 52)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.0ms | Allocations: 996)
+Completed 200 OK in 10ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 2435)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:43:39 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 121)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:43:39 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 120)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 12:43:57 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"mike@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mike@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 261ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 888)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:43:58 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (55.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (6.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.3ms | Allocations: 52)
+  Rendered vehicles/index.json.jbuilder (Duration: 10.0ms | Allocations: 996)
+Completed 200 OK in 108ms (Views: 4.8ms | ActiveRecord: 61.7ms | Allocations: 2435)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:43:58 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (7.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.3ms | Allocations: 52)
+  Rendered vehicles/index.json.jbuilder (Duration: 11.8ms | Allocations: 996)
+Completed 200 OK in 22ms (Views: 5.9ms | ActiveRecord: 9.1ms | Allocations: 2435)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 12:44:25 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Acura", "model"=>"MDX"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1255)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:44:31 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 120)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:44:31 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 120)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 12:44:41 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"joe@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 257ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 734)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:44:42 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [0 times] (Duration: 0.2ms | Allocations: 27)
+  Rendered vehicles/index.json.jbuilder (Duration: 4.2ms | Allocations: 896)
+Completed 200 OK in 12ms (Views: 4.7ms | ActiveRecord: 0.9ms | Allocations: 2335)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:44:42 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [0 times] (Duration: 0.1ms | Allocations: 22)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.0ms | Allocations: 886)
+Completed 200 OK in 11ms (Views: 3.3ms | ActiveRecord: 1.0ms | Allocations: 2326)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:45:24 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 120)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:45:24 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 120)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 12:45:42 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"joe@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 254ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 734)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:45:43 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [0 times] (Duration: 0.5ms | Allocations: 22)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.9ms | Allocations: 887)
+Completed 200 OK in 19ms (Views: 6.1ms | ActiveRecord: 1.9ms | Allocations: 2326)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:45:43 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [0 times] (Duration: 0.2ms | Allocations: 22)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.6ms | Allocations: 886)
+Completed 200 OK in 17ms (Views: 3.9ms | ActiveRecord: 2.4ms | Allocations: 2325)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:47:41 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 120)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:47:41 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 121)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 12:47:52 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 261ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 734)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:47:52 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [2 times] (Duration: 0.4ms | Allocations: 78)
+  Rendered vehicles/index.json.jbuilder (Duration: 6.3ms | Allocations: 1106)
+Completed 200 OK in 16ms (Views: 6.5ms | ActiveRecord: 2.1ms | Allocations: 2545)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:47:52 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (4.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [2 times] (Duration: 0.5ms | Allocations: 78)
+  Rendered vehicles/index.json.jbuilder (Duration: 9.6ms | Allocations: 1105)
+Completed 200 OK in 37ms (Views: 5.7ms | ActiveRecord: 12.0ms | Allocations: 2544)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 12:48:45 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Ford", "model"=>"Mustang"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 8ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 2529)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 12:53:25 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [2 times] (Duration: 0.2ms | Allocations: 78)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.2ms | Allocations: 1105)
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 2546)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 12:54:08 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Ford", "model"=>"Mustang"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 2528)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 12:54:47 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Ford", "model"=>"Mustang"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 58ms (Views: 0.4ms | ActiveRecord: 48.5ms | Allocations: 3107)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 12:55:41 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Ford", "model"=>"Mustang"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 85ms (Views: 0.2ms | ActiveRecord: 55.4ms | Allocations: 10203)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:02:18 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (59.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [2 times] (Duration: 0.8ms | Allocations: 103)
+  Rendered vehicles/index.json.jbuilder (Duration: 153.6ms | Allocations: 1957)
+Completed 200 OK in 257ms (Views: 97.0ms | ActiveRecord: 137.8ms | Allocations: 7046)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:02:18 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [2 times] (Duration: 0.3ms | Allocations: 78)
+  Rendered vehicles/index.json.jbuilder (Duration: 12.1ms | Allocations: 1105)
+Completed 200 OK in 21ms (Views: 12.7ms | ActiveRecord: 1.0ms | Allocations: 2544)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 13:02:57 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"F150", "vehicle_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 2527)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 13:03:43 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"F150", "user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 2532)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 13:07:04 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"F150"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 9ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 2529)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 13:15:00 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"F150"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 19ms (Views: 0.2ms | ActiveRecord: 8.6ms | Allocations: 5391)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:18:18 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [2 times] (Duration: 0.5ms | Allocations: 78)
+  Rendered vehicles/index.json.jbuilder (Duration: 11.3ms | Allocations: 1107)
+Completed 200 OK in 21ms (Views: 11.6ms | ActiveRecord: 1.5ms | Allocations: 2548)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 13:18:21 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"F150"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2527)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 13:19:44 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"F150"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  [1m[36mVehicle Create (0.9ms)[0m  [1m[32mINSERT INTO "vehicles" ("year", "make", "model", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["year", 2018], ["make", "Ford"], ["model", "F150"], ["created_at", "2023-09-07 18:19:44.649746"], ["updated_at", "2023-09-07 18:19:44.649746"], ["user_id", 1]]
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 0.8ms | Allocations: 119)
+  Rendered vehicles/show.json.jbuilder (Duration: 2.1ms | Allocations: 381)
+Completed 200 OK in 39ms (Views: 4.4ms | ActiveRecord: 11.8ms | Allocations: 14273)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddImageUrlToVehicles (20230907183643)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "image_url" text[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230907183643"]]
+  [1m[36mTRANSACTION (40.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
