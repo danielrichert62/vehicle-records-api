@@ -23,6 +23,7 @@ class VehiclesController < ApplicationController
       year: params[:year],
       make: params[:make],
       model: params[:model],
+      image_url: params[:image_url],
     )
     if @vehicle.save #happy path
       render :show

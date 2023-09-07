@@ -4097,3 +4097,1105 @@ Migrating to AddImageUrlToVehicles (20230907183643)
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8515547032390274730)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:41:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (22.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 2.5ms | Allocations: 300)
+  Rendered vehicles/index.json.jbuilder (Duration: 12.4ms | Allocations: 4586)
+Completed 200 OK in 65ms (Views: 15.9ms | ActiveRecord: 23.7ms | Allocations: 12202)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:41:47 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.8ms | Allocations: 136)
+  Rendered vehicles/index.json.jbuilder (Duration: 9.5ms | Allocations: 1280)
+Completed 200 OK in 19ms (Views: 10.7ms | ActiveRecord: 1.4ms | Allocations: 2719)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:46:02 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 1.0ms | Allocations: 136)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.5ms | Allocations: 1280)
+Completed 200 OK in 31ms (Views: 6.7ms | ActiveRecord: 16.5ms | Allocations: 2719)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:46:02 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.5ms | Allocations: 136)
+  Rendered vehicles/index.json.jbuilder (Duration: 4.8ms | Allocations: 1280)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.7ms | Allocations: 2719)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:51:28 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.5ms | Allocations: 136)
+  Rendered vehicles/index.json.jbuilder (Duration: 7.4ms | Allocations: 1303)
+Completed 200 OK in 179ms (Views: 7.3ms | ActiveRecord: 19.8ms | Allocations: 5633)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:51:28 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.6ms | Allocations: 136)
+  Rendered vehicles/index.json.jbuilder (Duration: 7.3ms | Allocations: 1280)
+Completed 200 OK in 27ms (Views: 7.0ms | ActiveRecord: 12.4ms | Allocations: 2719)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:53:17 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.3ms | Allocations: 136)
+  Rendered vehicles/index.json.jbuilder (Duration: 4.1ms | Allocations: 1280)
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 1.0ms | Allocations: 2719)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:53:17 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 1.1ms | Allocations: 136)
+  Rendered vehicles/index.json.jbuilder (Duration: 8.0ms | Allocations: 1280)
+Completed 200 OK in 22ms (Views: 8.1ms | ActiveRecord: 2.2ms | Allocations: 2719)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:57:02 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.6ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.3ms | Allocations: 1318)
+Completed 200 OK in 15ms (Views: 5.7ms | ActiveRecord: 1.4ms | Allocations: 2757)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:57:02 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.6ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 6.3ms | Allocations: 1318)
+Completed 200 OK in 14ms (Views: 6.9ms | ActiveRecord: 1.1ms | Allocations: 2757)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:58:07 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 124)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:58:07 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 120)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 13:58:34 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"mike@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mike@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 255ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 933)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:58:34 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (18.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.3ms | Allocations: 64)
+  Rendered vehicles/index.json.jbuilder (Duration: 6.5ms | Allocations: 1035)
+Completed 200 OK in 33ms (Views: 5.6ms | ActiveRecord: 19.9ms | Allocations: 2475)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 13:58:34 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (2.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.3ms | Allocations: 64)
+  Rendered vehicles/index.json.jbuilder (Duration: 7.1ms | Allocations: 1035)
+Completed 200 OK in 28ms (Views: 6.4ms | ActiveRecord: 4.9ms | Allocations: 2474)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:01:14 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2017", "make"=>"Lamborghini", "model"=>"Huracan", "image_url"=>"https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/05/Lamborghini-Huracan.jpg?q=50&fit=crop&w=750&dpr=1.5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1250)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:01:53 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 120)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:01:53 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 120)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:02:19 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Lamborghini", "model"=>"Huracan", "image_url"=>"https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/05/Lamborghini-Huracan.jpg?q=50&fit=crop&w=750&dpr=1.5"}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 118)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 14:02:32 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 273ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 734)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:02:32 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (6.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.6ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 11.0ms | Allocations: 1318)
+Completed 200 OK in 24ms (Views: 5.4ms | ActiveRecord: 7.0ms | Allocations: 2758)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:02:32 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.3ms | Allocations: 1318)
+Completed 200 OK in 16ms (Views: 6.0ms | ActiveRecord: 2.5ms | Allocations: 2758)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:02:53 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Lamborghini", "model"=>"Huracan", "image_url"=>"https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/05/Lamborghini-Huracan.jpg?q=50&fit=crop&w=750&dpr=1.5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms | Allocations: 2265)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'image_url' for Vehicle.):
+  
+app/controllers/vehicles_controller.rb:21:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:06:03 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Lamborghini", "model"=>"Huracan", "image_url"=>"https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/05/Lamborghini-Huracan.jpg?q=50&fit=crop&w=750&dpr=1.5"}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 14:06:27 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 269ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 733)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:07:03 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Lamborghini", "model"=>"Huracan", "image_url"=>"https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/05/Lamborghini-Huracan.jpg?q=50&fit=crop&w=750&dpr=1.5"}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:09:50 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Lamborghini", "model"=>"Huracan", "image_url"=>"https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/05/Lamborghini-Huracan.jpg"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms | Allocations: 2182)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'image_url' for Vehicle.):
+  
+app/controllers/vehicles_controller.rb:21:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:09:57 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Lamborghini", "model"=>"Huracan", "image_url"=>"https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/05/Lamborghini-Huracan.jpg"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 2182)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'image_url' for Vehicle.):
+  
+app/controllers/vehicles_controller.rb:21:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:11:13 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Lamborghini", "model"=>"Huracan", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.3gyI1ua0H3Y2Cqdfb3H74gHaEK%26pid%3DApi&f=1&ipt=c0f1b83766067a7cb1e903a98ad150383479625282a7031c91aef52116cecb73&ipo=images"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms | Allocations: 2182)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'image_url' for Vehicle.):
+  
+app/controllers/vehicles_controller.rb:21:in `create'
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:15:29 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.3ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.7ms | Allocations: 1318)
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 2756)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:16:35 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.3ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.7ms | Allocations: 1318)
+Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 2756)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:16:41 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Lamborghini", "model"=>"Huracan", "image_url"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 2182)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'image_url' for Vehicle.):
+  
+app/controllers/vehicles_controller.rb:21:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:17:19 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Lamborghini", "model"=>"Huracan", "image_url"=>"https://static1.hotcarsimages.com/wordpress/wp-content/uploads/2020/05/Lamborghini-Huracan.jpg?q=50&fit=crop&w=750&dpr=1.5"}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 117)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:19:43 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.7ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.7ms | Allocations: 1318)
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 2756)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:19:51 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Lamborghini", "model"=>"Huracan", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.jRkDEimGGHOeYO41SbCaSAHaHa%26pid%3DApi&f=1&ipt=621dc6b88fd22727c33eabe3901fab4e258cfd3f9a755eef68022d23c3a4f3d4&ipo=images"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 2182)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'image_url' for Vehicle.):
+  
+app/controllers/vehicles_controller.rb:21:in `create'
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:19:57 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Lamborghini", "model"=>"Huracan", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.jRkDEimGGHOeYO41SbCaSAHaHa%26pid%3DApi&f=1&ipt=621dc6b88fd22727c33eabe3901fab4e258cfd3f9a755eef68022d23c3a4f3d4&ipo=images"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms | Allocations: 2182)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'image_url' for Vehicle.):
+  
+app/controllers/vehicles_controller.rb:21:in `create'
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:21:13 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.7ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 4.8ms | Allocations: 1318)
+Completed 200 OK in 17ms (Views: 5.3ms | ActiveRecord: 1.3ms | Allocations: 2756)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:21:13 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.5ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 4.5ms | Allocations: 1318)
+Completed 200 OK in 16ms (Views: 5.9ms | ActiveRecord: 0.9ms | Allocations: 2756)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:21:18 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (7.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.8ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 13.7ms | Allocations: 1318)
+Completed 200 OK in 27ms (Views: 7.6ms | ActiveRecord: 11.6ms | Allocations: 2756)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:21:19 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.6ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 6.9ms | Allocations: 1318)
+Completed 200 OK in 19ms (Views: 7.2ms | ActiveRecord: 2.1ms | Allocations: 2756)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:21:42 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:21:42 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:22:08 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Acura", "model"=>"RDX", "image_url"=>""}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 116)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:23:42 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:24:01 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-07 14:24:07 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 295ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 733)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:24:07 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (3.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.5ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 8.8ms | Allocations: 1318)
+Completed 200 OK in 24ms (Views: 7.1ms | ActiveRecord: 7.3ms | Allocations: 2758)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:24:07 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (5.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.6ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 10.8ms | Allocations: 1318)
+Completed 200 OK in 18ms (Views: 6.6ms | ActiveRecord: 5.7ms | Allocations: 2757)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 14:24:43 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Toyota", "model"=>"Camry", "image_url"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms | Allocations: 2182)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'image_url' for Vehicle.):
+  
+app/controllers/vehicles_controller.rb:21:in `create'
+Started GET "/vehicles.json" for ::1 at 2023-09-07 14:27:44 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.3ms | Allocations: 140)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.9ms | Allocations: 1318)
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 0.8ms | Allocations: 2756)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (40.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (8625.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "vehicle_records_api_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (67.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "vehicle_records_api_development"[0m
+  [1m[35m (55.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "vehicle_records_api_test"[0m
+  [1m[35m (238.6ms)[0m  [1m[35mCREATE DATABASE "vehicle_records_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (120.0ms)[0m  [1m[35mCREATE DATABASE "vehicle_records_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "fuels" CASCADE[0m
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE "fuels" ("id" bigserial primary key, "fill_date" date, "mileage" integer, "cost_per_gallon" decimal, "location" character varying, "gallons" decimal, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE INDEX "index_fuels_on_vehicle_id" ON "fuels" ("vehicle_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "name" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "vehicle_id" integer, "admin" boolean DEFAULT FALSE)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "year" integer, "make" character varying, "model" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer, "image_url" text)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mALTER TABLE "fuels" ADD CONSTRAINT "fk_rails_a5bf479bf6"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230907183643)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230905201511),
+(20230905201633),
+(20230905201656),
+(20230907004421),
+(20230907004435),
+(20230907150435),
+(20230907150449),
+(20230907154613);
+
+[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-07 20:03:46.856100"], ["updated_at", "2023-09-07 20:03:46.856100"]]
+  [1m[36mTRANSACTION (26.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7be96bd6126d5b20be5a1ccb3efd48f02e7dbb52"], ["created_at", "2023-09-07 20:03:46.899229"], ["updated_at", "2023-09-07 20:03:46.899229"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "fuels" CASCADE[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "fuels" ("id" bigserial primary key, "fill_date" date, "mileage" integer, "cost_per_gallon" decimal, "location" character varying, "gallons" decimal, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE INDEX "index_fuels_on_vehicle_id" ON "fuels" ("vehicle_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "name" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "vehicle_id" integer, "admin" boolean DEFAULT FALSE)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "year" integer, "make" character varying, "model" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer, "image_url" text)[0m
+  [1m[35m (4.1ms)[0m  [1m[35mALTER TABLE "fuels" ADD CONSTRAINT "fk_rails_a5bf479bf6"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230907183643)[0m
+  [1m[35m (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230905201511),
+(20230905201633),
+(20230905201656),
+(20230907004421),
+(20230907004435),
+(20230907150435),
+(20230907150449),
+(20230907154613);
+
+[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-07 20:03:47.004791"], ["updated_at", "2023-09-07 20:03:47.004791"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-09-07 20:03:47.013865"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7be96bd6126d5b20be5a1ccb3efd48f02e7dbb52"], ["created_at", "2023-09-07 20:03:47.021588"], ["updated_at", "2023-09-07 20:03:47.021588"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (67.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "vehicle_records_api_development"[0m
+  [1m[35m (53.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "vehicle_records_api_test"[0m
+  [1m[35m (117.0ms)[0m  [1m[35mCREATE DATABASE "vehicle_records_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (158.9ms)[0m  [1m[35mCREATE DATABASE "vehicle_records_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "fuels" CASCADE[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "fuels" ("id" bigserial primary key, "fill_date" date, "mileage" integer, "cost_per_gallon" decimal, "location" character varying, "gallons" decimal, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE INDEX "index_fuels_on_vehicle_id" ON "fuels" ("vehicle_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "name" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "vehicle_id" integer, "admin" boolean DEFAULT FALSE)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles" CASCADE[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "year" integer, "make" character varying, "model" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer, "image_url" text)[0m
+  [1m[35m (4.8ms)[0m  [1m[35mALTER TABLE "fuels" ADD CONSTRAINT "fk_rails_a5bf479bf6"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230907183643)[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230905201511),
+(20230905201633),
+(20230905201656),
+(20230907004421),
+(20230907004435),
+(20230907150435),
+(20230907150449),
+(20230907154613);
+
+[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-07 20:05:22.032157"], ["updated_at", "2023-09-07 20:05:22.032157"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7be96bd6126d5b20be5a1ccb3efd48f02e7dbb52"], ["created_at", "2023-09-07 20:05:22.048268"], ["updated_at", "2023-09-07 20:05:22.048268"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "fuels" CASCADE[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "fuels" ("id" bigserial primary key, "fill_date" date, "mileage" integer, "cost_per_gallon" decimal, "location" character varying, "gallons" decimal, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE INDEX "index_fuels_on_vehicle_id" ON "fuels" ("vehicle_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "name" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "vehicle_id" integer, "admin" boolean DEFAULT FALSE)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles" CASCADE[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "year" integer, "make" character varying, "model" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer, "image_url" text)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "fuels" ADD CONSTRAINT "fk_rails_a5bf479bf6"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230907183643)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230905201511),
+(20230905201633),
+(20230905201656),
+(20230907004421),
+(20230907004435),
+(20230907150435),
+(20230907150449),
+(20230907154613);
+
+[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-07 20:05:22.134352"], ["updated_at", "2023-09-07 20:05:22.134352"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-09-07 20:05:22.143364"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7be96bd6126d5b20be5a1ccb3efd48f02e7dbb52"], ["created_at", "2023-09-07 20:05:22.150394"], ["updated_at", "2023-09-07 20:05:22.150394"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (4344.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "vehicle_records_api_development"[0m
+  [1m[35m (60.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "vehicle_records_api_test"[0m
+  [1m[35m (132.8ms)[0m  [1m[35mCREATE DATABASE "vehicle_records_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (123.2ms)[0m  [1m[35mCREATE DATABASE "vehicle_records_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "fuels" CASCADE[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "fuels" ("id" bigserial primary key, "fill_date" date, "mileage" integer, "cost_per_gallon" decimal, "location" character varying, "gallons" decimal, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_fuels_on_vehicle_id" ON "fuels" ("vehicle_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "name" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "vehicle_id" integer, "admin" boolean DEFAULT FALSE)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "year" integer, "make" character varying, "model" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer, "image_url" text)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mALTER TABLE "fuels" ADD CONSTRAINT "fk_rails_a5bf479bf6"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230907183643)[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230905201511),
+(20230905201633),
+(20230905201656),
+(20230907004421),
+(20230907004435),
+(20230907150435),
+(20230907150449),
+(20230907154613);
+
+[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-07 20:07:40.878949"], ["updated_at", "2023-09-07 20:07:40.878949"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7be96bd6126d5b20be5a1ccb3efd48f02e7dbb52"], ["created_at", "2023-09-07 20:07:40.891255"], ["updated_at", "2023-09-07 20:07:40.891255"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "fuels" CASCADE[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "fuels" ("id" bigserial primary key, "fill_date" date, "mileage" integer, "cost_per_gallon" decimal, "location" character varying, "gallons" decimal, "vehicle_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE INDEX "index_fuels_on_vehicle_id" ON "fuels" ("vehicle_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "name" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "vehicle_id" integer, "admin" boolean DEFAULT FALSE)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "vehicles" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" bigserial primary key, "year" integer, "make" character varying, "model" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer, "image_url" text)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mALTER TABLE "fuels" ADD CONSTRAINT "fk_rails_a5bf479bf6"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230907183643)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230905201511),
+(20230905201633),
+(20230905201656),
+(20230907004421),
+(20230907004435),
+(20230907150435),
+(20230907150449),
+(20230907154613);
+
+[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-09-07 20:07:40.984292"], ["updated_at", "2023-09-07 20:07:40.984292"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-09-07 20:07:40.993552"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7be96bd6126d5b20be5a1ccb3efd48f02e7dbb52"], ["created_at", "2023-09-07 20:07:41.001713"], ["updated_at", "2023-09-07 20:07:41.001713"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at", "vehicle_id", "admin") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "dan@example.com"], ["name", "Dan Example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-09-07 20:07:41.089792"], ["updated_at", "2023-09-07 20:07:41.089792"], ["vehicle_id", 1], ["admin", true]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mike@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at", "vehicle_id", "admin") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "mike@example.com"], ["name", "Mike Example"], ["password_digest", "[FILTERED]"], ["created_at", "2023-09-07 20:07:41.105752"], ["updated_at", "2023-09-07 20:07:41.105752"], ["vehicle_id", 2], ["admin", false]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVehicle Create (0.9ms)[0m  [1m[32mINSERT INTO "vehicles" ("year", "make", "model", "created_at", "updated_at", "user_id", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 2013], ["make", "Ford"], ["model", "Escape"], ["created_at", "2023-09-07 20:07:41.140438"], ["updated_at", "2023-09-07 20:07:41.140438"], ["user_id", 1], ["image_url", "https://i.pinimg.com/originals/00/6e/7c/006e7ce7491c7f34e8ac3cd307e70ccc.jpg"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVehicle Create (0.7ms)[0m  [1m[32mINSERT INTO "vehicles" ("year", "make", "model", "created_at", "updated_at", "user_id", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 2009], ["make", "Saturn"], ["model", "Vue XE"], ["created_at", "2023-09-07 20:07:41.150237"], ["updated_at", "2023-09-07 20:07:41.150237"], ["user_id", 2], ["image_url", "https://file.kelleybluebookimages.com/kbb/base/house/2009/2009-Saturn-VUE-FrontSide_SSVUE091_505x375.jpg?interpolation=high-quality&downsize=825:*"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFuel Create (1.3ms)[0m  [1m[32mINSERT INTO "fuels" ("fill_date", "mileage", "cost_per_gallon", "location", "gallons", "vehicle_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["fill_date", "2023-06-20"], ["mileage", 81000], ["cost_per_gallon", "3.85"], ["location", "RLB Meijer"], ["gallons", "14.78"], ["vehicle_id", 2], ["created_at", "2023-09-07 20:07:41.185536"], ["updated_at", "2023-09-07 20:07:41.185536"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFuel Create (0.9ms)[0m  [1m[32mINSERT INTO "fuels" ("fill_date", "mileage", "cost_per_gallon", "location", "gallons", "vehicle_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["fill_date", "2023-06-23"], ["mileage", 156105], ["cost_per_gallon", "3.75"], ["location", "NEX North Chicago"], ["gallons", "10.45"], ["vehicle_id", 1], ["created_at", "2023-09-07 20:07:41.194805"], ["updated_at", "2023-09-07 20:07:41.194805"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFuel Create (0.4ms)[0m  [1m[32mINSERT INTO "fuels" ("fill_date", "mileage", "cost_per_gallon", "location", "gallons", "vehicle_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["fill_date", "2023-07-04"], ["mileage", 81206], ["cost_per_gallon", "4.06"], ["location", "RLB Meijer"], ["gallons", "13.74"], ["vehicle_id", 2], ["created_at", "2023-09-07 20:07:41.203659"], ["updated_at", "2023-09-07 20:07:41.203659"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFuel Create (0.5ms)[0m  [1m[32mINSERT INTO "fuels" ("fill_date", "mileage", "cost_per_gallon", "location", "gallons", "vehicle_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["fill_date", "2023-07-10"], ["mileage", 81507], ["cost_per_gallon", "3.98"], ["location", "RLB Meijer"], ["gallons", "12.78"], ["vehicle_id", 2], ["created_at", "2023-09-07 20:07:41.211218"], ["updated_at", "2023-09-07 20:07:41.211218"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFuel Create (0.6ms)[0m  [1m[32mINSERT INTO "fuels" ("fill_date", "mileage", "cost_per_gallon", "location", "gallons", "vehicle_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["fill_date", "2023-07-19"], ["mileage", 156490], ["cost_per_gallon", "3.78"], ["location", "Shell Rt 83"], ["gallons", "10.56"], ["vehicle_id", 1], ["created_at", "2023-09-07 20:07:41.219256"], ["updated_at", "2023-09-07 20:07:41.219256"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFuel Create (0.5ms)[0m  [1m[32mINSERT INTO "fuels" ("fill_date", "mileage", "cost_per_gallon", "location", "gallons", "vehicle_id", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["fill_date", "2023-07-29"], ["mileage", 156980], ["cost_per_gallon", "4.09"], ["location", "Shell Rt 83"], ["gallons", "12.06"], ["vehicle_id", 1], ["created_at", "2023-09-07 20:07:41.226980"], ["updated_at", "2023-09-07 20:07:41.226980"], ["user_id", nil]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/vehicles.json" for ::1 at 2023-09-07 15:07:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 1.3ms | Allocations: 283)
+  Rendered vehicles/index.json.jbuilder (Duration: 23.1ms | Allocations: 7879)
+Completed 200 OK in 86ms (Views: 31.0ms | ActiveRecord: 10.4ms | Allocations: 25456)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 15:08:00 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.9ms | Allocations: 138)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.9ms | Allocations: 1280)
+Completed 200 OK in 16ms (Views: 9.9ms | ActiveRecord: 1.2ms | Allocations: 3395)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 15:10:56 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.3ms | Allocations: 55)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.7ms | Allocations: 1012)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 1.7ms | Allocations: 2466)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 15:10:56 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (13.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.2ms | Allocations: 55)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.2ms | Allocations: 1011)
+Completed 200 OK in 23ms (Views: 3.4ms | ActiveRecord: 13.7ms | Allocations: 2450)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 15:11:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 1.5ms | Allocations: 283)
+  Rendered vehicles/index.json.jbuilder (Duration: 33.1ms | Allocations: 7879)
+Completed 200 OK in 111ms (Views: 41.1ms | ActiveRecord: 16.4ms | Allocations: 25455)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 15:11:23 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 1.7ms | Allocations: 138)
+  Rendered vehicles/index.json.jbuilder (Duration: 6.9ms | Allocations: 1280)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.7ms | Allocations: 3395)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 15:14:07 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (3.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.4ms | Allocations: 55)
+  Rendered vehicles/index.json.jbuilder (Duration: 7.5ms | Allocations: 1012)
+Completed 200 OK in 30ms (Views: 5.5ms | ActiveRecord: 8.7ms | Allocations: 2466)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 15:14:07 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [1 times] (Duration: 0.2ms | Allocations: 55)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.8ms | Allocations: 1011)
+Completed 200 OK in 19ms (Views: 4.4ms | ActiveRecord: 1.9ms | Allocations: 2450)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 15:16:20 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Toyota", "model"=>"Camry", "image_url"=>"https://www.carpixel.net/w/8fd4065aff1a442ab4a8c65ba2a592f7/toyota-camry-xle-wallpaper-hd-66464.jpg"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  [1m[36mVehicle Create (0.7ms)[0m  [1m[32mINSERT INTO "vehicles" ("year", "make", "model", "created_at", "updated_at", "user_id", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 2018], ["make", "Toyota"], ["model", "Camry"], ["created_at", "2023-09-07 20:16:20.552008"], ["updated_at", "2023-09-07 20:16:20.552008"], ["user_id", 1], ["image_url", "https://www.carpixel.net/w/8fd4065aff1a442ab4a8c65ba2a592f7/toyota-camry-xle-wallpaper-hd-66464.jpg"]]
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 0.9ms | Allocations: 113)
+  Rendered vehicles/show.json.jbuilder (Duration: 2.7ms | Allocations: 401)
+Completed 200 OK in 59ms (Views: 4.1ms | ActiveRecord: 41.6ms | Allocations: 7299)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 15:17:14 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2019", "make"=>"Toyota", "model"=>"Camry", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  [1m[36mVehicle Create (1.1ms)[0m  [1m[32mINSERT INTO "vehicles" ("year", "make", "model", "created_at", "updated_at", "user_id", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 2019], ["make", "Toyota"], ["model", "Camry"], ["created_at", "2023-09-07 20:17:14.822554"], ["updated_at", "2023-09-07 20:17:14.822554"], ["user_id", 1], ["image_url", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images"]]
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 0.2ms | Allocations: 27)
+  Rendered vehicles/show.json.jbuilder (Duration: 0.7ms | Allocations: 196)
+Completed 200 OK in 32ms (Views: 1.9ms | ActiveRecord: 5.0ms | Allocations: 5018)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 15:18:54 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 113)
+  Rendered vehicles/index.json.jbuilder (Duration: 5.4ms | Allocations: 1267)
+Completed 200 OK in 13ms (Views: 6.0ms | ActiveRecord: 1.2ms | Allocations: 2708)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-07 15:18:54 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (2.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 1.0ms | Allocations: 113)
+  Rendered vehicles/index.json.jbuilder (Duration: 10.6ms | Allocations: 1267)
+Completed 200 OK in 71ms (Views: 10.5ms | ActiveRecord: 9.0ms | Allocations: 2707)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-07 15:19:54 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2023", "make"=>"Honda", "model"=>"CRV", "image_url"=>"https://www.carscoops.com/wp-content/uploads/2021/08/Honda-CR-V-1.jpg"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  [1m[36mVehicle Create (0.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("year", "make", "model", "created_at", "updated_at", "user_id", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 2023], ["make", "Honda"], ["model", "CRV"], ["created_at", "2023-09-07 20:19:54.451087"], ["updated_at", "2023-09-07 20:19:54.451087"], ["user_id", 1], ["image_url", "https://www.carscoops.com/wp-content/uploads/2021/08/Honda-CR-V-1.jpg"]]
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:21:in `create'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 0.1ms | Allocations: 27)
+  Rendered vehicles/show.json.jbuilder (Duration: 0.4ms | Allocations: 185)
+Completed 200 OK in 14ms (Views: 0.9ms | ActiveRecord: 1.3ms | Allocations: 5018)
+
+

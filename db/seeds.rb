@@ -5,9 +5,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+User.create!([
+  { email: "dan@example.com", name: "Dan Example", vehicle_id: 1, admin: true, password_digest: "$2a$12$ggKAL0Ja.MbnZWP4OgQc4eBxBE6tE2CXxLw1Y7MgQoz0AYa/Bh.tW" },
+  { email: "mike@example.com", name: "Mike Example", vehicle_id: 2, admin: false, password_digest: "$2a$12$/urmKU1wb1TydNESDbXjbOkezpI734OXJ7FeYL7uHvephj89EbVUW" },
+])
+
 Vehicle.create!([
-  { year: 2013, make: "Ford", model: "Explorer" },
-  { year: 2009, make: "Saturn", model: "Vue XE" },
+  { year: 2013, make: "Ford", model: "Escape", image_url: "https://i.pinimg.com/originals/00/6e/7c/006e7ce7491c7f34e8ac3cd307e70ccc.jpg", user_id: 1 },
+  { year: 2009, make: "Saturn", model: "Vue XE", image_url: "https://file.kelleybluebookimages.com/kbb/base/house/2009/2009-Saturn-VUE-FrontSide_SSVUE091_505x375.jpg?interpolation=high-quality&downsize=825:*", user_id: 2 },
 ])
 
 Fuel.create!([
@@ -17,11 +22,6 @@ Fuel.create!([
   { fill_date: "10-Jul-2023", mileage: 81507, cost_per_gallon: 3.98, location: "RLB Meijer", gallons: 12.78, vehicle_id: 2 },
   { fill_date: "19-Jul-2023", mileage: 156490, cost_per_gallon: 3.78, location: "Shell Rt 83", gallons: 10.56, vehicle_id: 1 },
   { fill_date: "29-Jul-2023", mileage: 156980, cost_per_gallon: 4.09, location: "Shell Rt 83", gallons: 12.06, vehicle_id: 1 },
-])
-
-User.create!([
-  { email: "dan@example.com", name: "Dan Example", password_digest: "$2a$12$ggKAL0Ja.MbnZWP4OgQc4eBxBE6tE2CXxLw1Y7MgQoz0AYa/Bh.tW" },
-  { email: "mike@example.com", name: "Mike Example", password_digest: "$2a$12$/urmKU1wb1TydNESDbXjbOkezpI734OXJ7FeYL7uHvephj89EbVUW" },
 ])
 
 # Maintenance.create!([
