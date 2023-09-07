@@ -2452,3 +2452,267 @@ Processing by VehiclesController#create as JSON
 Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 984)
 
 
+Started GET "/vehicles.json" for ::1 at 2023-09-06 19:28:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 1.1ms | Allocations: 322)
+  Rendered vehicles/index.json.jbuilder (Duration: 20.1ms | Allocations: 6158)
+Completed 200 OK in 55ms (Views: 21.0ms | ActiveRecord: 6.1ms | Allocations: 12556)
+
+
+Started GET "/fuels.json" for ::1 at 2023-09-06 19:28:44 -0500
+Processing by FuelsController#index as JSON
+  Rendering fuels/index.json.jbuilder
+  [1m[36mFuel Load (41.2ms)[0m  [1m[34mSELECT "fuels".* FROM "fuels"[0m
+  ↳ app/views/fuels/index.json.jbuilder:1
+  Rendered collection of fuels/_fuel.json.jbuilder [7 times] (Duration: 3.3ms | Allocations: 454)
+  Rendered fuels/index.json.jbuilder (Duration: 63.7ms | Allocations: 6787)
+Completed 200 OK in 76ms (Views: 23.0ms | ActiveRecord: 44.5ms | Allocations: 8922)
+
+
+  [1m[35m (44.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddVehicleIdToVehicles (20230907003656)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (44.0ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "vehicle_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230907003656"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveVehicleIdFromVehicles (20230907004211)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (42.8ms)[0m  [1m[35mALTER TABLE "vehicles" DROP COLUMN "vehicle_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230907004211"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddVehicleIdToFuels (20230907004421)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (41.9ms)[0m  [1m[35mALTER TABLE "fuels" ADD "vehicle_id" integer[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(8515547032390274730)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddVehicleIdToFuels (20230907004421)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230907004421"]]
+  [1m[36mTRANSACTION (40.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddVehicleIdToUsers (20230907004435)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "vehicle_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230907004435"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8515547032390274730)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/vehicles.json" for ::1 at 2023-09-06 19:50:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 1.0ms | Allocations: 322)
+  Rendered vehicles/index.json.jbuilder (Duration: 16.6ms | Allocations: 6158)
+Completed 200 OK in 37ms (Views: 16.8ms | ActiveRecord: 4.6ms | Allocations: 12557)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 19:50:24 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.7ms | Allocations: 182)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.5ms | Allocations: 1330)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 2314)
+
+
+Started GET "/fuels.json" for ::1 at 2023-09-06 19:50:28 -0500
+Processing by FuelsController#index as JSON
+  Rendering fuels/index.json.jbuilder
+  [1m[36mFuel Load (0.6ms)[0m  [1m[34mSELECT "fuels".* FROM "fuels"[0m
+  ↳ app/views/fuels/index.json.jbuilder:1
+  Rendered collection of fuels/_fuel.json.jbuilder [7 times] (Duration: 1.2ms | Allocations: 454)
+  Rendered fuels/index.json.jbuilder (Duration: 15.9ms | Allocations: 6744)
+Completed 200 OK in 22ms (Views: 15.2ms | ActiveRecord: 3.3ms | Allocations: 8512)
+
+
+Started GET "/users.json" for ::1 at 2023-09-06 19:50:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users.json"):
+  
+Started GET "/users.json" for ::1 at 2023-09-06 19:50:50 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users.json"):
+  
+Started GET "/vehicles.json" for ::1 at 2023-09-06 19:51:50 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.4ms | Allocations: 1060)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 1368)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 19:51:50 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.2ms | Allocations: 1052)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 1352)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-06 19:52:32 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 305ms (Views: 0.2ms | ActiveRecord: 3.1ms | Allocations: 7118)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 19:52:33 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (16.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.3ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 25.4ms | Allocations: 1053)
+Completed 200 OK in 27ms (Views: 10.1ms | ActiveRecord: 16.1ms | Allocations: 1356)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 19:52:33 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.9ms | Allocations: 1052)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.5ms | Allocations: 1352)
+
+
+Started POST "/users.json" for ::1 at 2023-09-06 19:57:44 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Joe", "email"=>"joe@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joe@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at", "vehicle_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "joe@example.com"], ["name", "Joe"], ["password_digest", "[FILTERED]"], ["created_at", "2023-09-07 00:57:45.085818"], ["updated_at", "2023-09-07 00:57:45.085818"], ["vehicle_id", nil]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (43.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 201 Created in 342ms (Views: 0.2ms | ActiveRecord: 44.6ms | Allocations: 4729)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 19:57:45 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.4ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.9ms | Allocations: 1052)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 1352)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 19:57:45 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (2.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.5ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 6.8ms | Allocations: 1052)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 2.8ms | Allocations: 1352)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-06 19:58:36 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"2018", "make"=>"Ford", "model"=>"F150"}
+Completed 422 Unprocessable Entity in 29ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 10413)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 20:21:47 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.5ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 123.5ms | Allocations: 3935)
+Completed 200 OK in 126ms (Views: 22.4ms | ActiveRecord: 102.3ms | Allocations: 4235)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 20:21:47 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.8ms | Allocations: 1052)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 1352)
+
+
+Started GET "/fuels.json" for ::1 at 2023-09-06 20:22:23 -0500
+Processing by FuelsController#index as JSON
+  Rendering fuels/index.json.jbuilder
+  [1m[36mFuel Load (0.6ms)[0m  [1m[34mSELECT "fuels".* FROM "fuels"[0m
+  ↳ app/views/fuels/index.json.jbuilder:1
+  Rendered collection of fuels/_fuel.json.jbuilder [7 times] (Duration: 0.6ms | Allocations: 316)
+  Rendered fuels/index.json.jbuilder (Duration: 3.5ms | Allocations: 1860)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 2163)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 20:25:31 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.2ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 2.7ms | Allocations: 1052)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 1353)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 20:26:07 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.3ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 6.5ms | Allocations: 1052)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 1.4ms | Allocations: 1354)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-06 20:27:48 -0500
+Processing by VehiclesController#index as JSON
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.3ms | Allocations: 99)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.8ms | Allocations: 1052)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 1353)
+
+

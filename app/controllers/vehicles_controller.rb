@@ -8,6 +8,7 @@ class VehiclesController < ApplicationController
       year: params[:year],
       make: params[:make],
       model: params[:model],
+
     )
     if @vehicle.save #happy path
       render :show
