@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # VEHICLE Routes
   get "/vehicles" => "vehicles#index"
   post "/vehicles" => "vehicles#create"
+  delete "/vehicles/:id" => "vehicles#destroy"
   #delete "/vehicles/:id" => "vehicles#destroy"
 
   # FUEL RECORD Routes

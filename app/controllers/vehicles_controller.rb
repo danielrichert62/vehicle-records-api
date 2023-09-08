@@ -1,5 +1,5 @@
 class VehiclesController < ApplicationController
-  before_action :authenticate_admin, except: [:index, :show]
+  # before_action :authenticate_admin, except: [:index, :show]
 
   def show
     @vehicle = Vehicle.find_by(id: params["id"])
@@ -18,7 +18,7 @@ class VehiclesController < ApplicationController
   end
 
   def create
-    @vehicle = Vehicle.create(
+    @vehicle = Vehicle.new(
       user_id: current_user.id,
       year: params[:year],
       make: params[:make],
