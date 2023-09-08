@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  # USERS Routes
+  get "/signup" => "users#new"
+  post "/users" => "users#create"
   post "/users" => "users#create"
   delete "/users/:id" => "users#destroy"
 
   # VEHICLE Routes
   get "/vehicles" => "vehicles#index"
+  get "/vehicles/:id" => "vehicles#show"
   post "/vehicles" => "vehicles#create"
+  patch "/vehicles/:id" => "vehicles#update"
   delete "/vehicles/:id" => "vehicles#destroy"
   #delete "/vehicles/:id" => "vehicles#destroy"
 
@@ -18,6 +23,4 @@ Rails.application.routes.draw do
   post "/sessions" => "sessions#create"
   get "/logout" => "sessions#destroy"
 
-  get "/signup" => "users#new"
-  post "/users" => "users#create"
 end

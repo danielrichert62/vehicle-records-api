@@ -6821,3 +6821,1375 @@ Started PATCH "/vehicles/8.json" for ::1 at 2023-09-08 11:55:04 -0500
   
 ActionController::RoutingError (No route matches [PATCH] "/vehicles/8.json"):
   
+Started PATCH "/vehicles/8.json" for ::1 at 2023-09-08 11:57:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [PATCH] "/vehicles/8.json"):
+  
+Started PATCH "/vehicles/8.json" for ::1 at 2023-09-08 11:59:42 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/vehicles/8.json"):
+  
+Started PATCH "/vehicles/8.json" for ::1 at 2023-09-08 12:21:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for VehiclesController):
+  
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:21:07 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (44.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (2.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 2.4ms | Allocations: 422)
+  Rendered vehicles/index.json.jbuilder (Duration: 44.4ms | Allocations: 8366)
+Completed 200 OK in 245ms (Views: 49.7ms | ActiveRecord: 83.1ms | Allocations: 24193)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:21:07 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 6.8ms | Allocations: 200)
+  Rendered vehicles/index.json.jbuilder (Duration: 31.5ms | Allocations: 1645)
+Completed 200 OK in 40ms (Views: 32.2ms | ActiveRecord: 1.2ms | Allocations: 3083)
+
+
+Started PATCH "/vehicles/8.json" for ::1 at 2023-09-08 12:21:25 -0500
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for VehiclesController):
+  
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:22:58 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (17.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 0.7ms | Allocations: 200)
+  Rendered vehicles/index.json.jbuilder (Duration: 23.8ms | Allocations: 1646)
+Completed 200 OK in 32ms (Views: 7.7ms | ActiveRecord: 18.1ms | Allocations: 3097)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:23:03 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (2.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 0.6ms | Allocations: 200)
+  Rendered vehicles/index.json.jbuilder (Duration: 7.3ms | Allocations: 1646)
+Completed 200 OK in 15ms (Views: 5.6ms | ActiveRecord: 3.7ms | Allocations: 3097)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:23:03 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (5.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 0.6ms | Allocations: 200)
+  Rendered vehicles/index.json.jbuilder (Duration: 10.4ms | Allocations: 1645)
+Completed 200 OK in 17ms (Views: 5.4ms | ActiveRecord: 7.2ms | Allocations: 3083)
+
+
+Started PATCH "/vehicles/5.json" for ::1 at 2023-09-08 12:23:16 -0500
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for VehiclesController):
+  
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/vehicles/5.json" for ::1 at 2023-09-08 12:30:08 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/dan/Actualize/vehicle-records-api/app/controllers/vehicles_controller.rb:44: syntax error, unexpected constant, expecting ')'
+      Model: params[:vehicle][:model]
+      ^~~~~
+/Users/dan/Actualize/vehicle-records-api/app/controllers/vehicles_controller.rb:47: syntax error, unexpected ')', expecting `end' or dummy end
+    )
+    ^
+):
+  
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected constant, expecting ')'
+app/controllers/vehicles_controller.rb:47: syntax error, unexpected ')', expecting `end' or dummy end
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected constant, expecting ')'
+app/controllers/vehicles_controller.rb:47: syntax error, unexpected ')', expecting `end' or dummy end
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected constant, expecting ')'
+app/controllers/vehicles_controller.rb:47: syntax error, unexpected ')', expecting `end' or dummy end
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:30:40 -0500
+  
+SyntaxError (/Users/dan/Actualize/vehicle-records-api/app/controllers/vehicles_controller.rb:44: syntax error, unexpected constant, expecting ')'
+      Model: params[:vehicle][:model]
+      ^~~~~
+/Users/dan/Actualize/vehicle-records-api/app/controllers/vehicles_controller.rb:47: syntax error, unexpected ')', expecting `end' or dummy end
+    )
+    ^
+):
+  
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected constant, expecting ')'
+app/controllers/vehicles_controller.rb:47: syntax error, unexpected ')', expecting `end' or dummy end
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected constant, expecting ')'
+app/controllers/vehicles_controller.rb:47: syntax error, unexpected ')', expecting `end' or dummy end
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected constant, expecting ')'
+app/controllers/vehicles_controller.rb:47: syntax error, unexpected ')', expecting `end' or dummy end
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:30:41 -0500
+  
+SyntaxError (/Users/dan/Actualize/vehicle-records-api/app/controllers/vehicles_controller.rb:44: syntax error, unexpected constant, expecting ')'
+      Model: params[:vehicle][:model]
+      ^~~~~
+/Users/dan/Actualize/vehicle-records-api/app/controllers/vehicles_controller.rb:47: syntax error, unexpected ')', expecting `end' or dummy end
+    )
+    ^
+):
+  
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected constant, expecting ')'
+app/controllers/vehicles_controller.rb:47: syntax error, unexpected ')', expecting `end' or dummy end
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected constant, expecting ')'
+app/controllers/vehicles_controller.rb:47: syntax error, unexpected ')', expecting `end' or dummy end
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected constant, expecting ')'
+app/controllers/vehicles_controller.rb:47: syntax error, unexpected ')', expecting `end' or dummy end
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:33:10 -0500
+  
+SyntaxError (/Users/dan/Actualize/vehicle-records-api/app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+      model: params[:vehicle][:model]
+      ^~~~~
+):
+  
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:33:11 -0500
+  
+SyntaxError (/Users/dan/Actualize/vehicle-records-api/app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+      model: params[:vehicle][:model]
+      ^~~~~
+):
+  
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:33:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/dan/Actualize/vehicle-records-api/app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+      model: params[:vehicle][:model]
+      ^~~~~
+):
+  
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:33:47 -0500
+  
+SyntaxError (/Users/dan/Actualize/vehicle-records-api/app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+      model: params[:vehicle][:model]
+      ^~~~~
+):
+  
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/vehicles_controller.rb:44: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:34:25 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (51.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 1.5ms | Allocations: 422)
+  Rendered vehicles/index.json.jbuilder (Duration: 26.8ms | Allocations: 8364)
+Completed 200 OK in 137ms (Views: 25.8ms | ActiveRecord: 63.5ms | Allocations: 24135)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:34:26 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 1.1ms | Allocations: 283)
+  Rendered vehicles/index.json.jbuilder (Duration: 6.9ms | Allocations: 1915)
+Completed 200 OK in 34ms (Views: 12.5ms | ActiveRecord: 3.5ms | Allocations: 4033)
+
+
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 12:34:47 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2020", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"4"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 1543)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started DELETE "/pVehicles/4.json" for ::1 at 2023-09-08 12:37:23 -0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/pVehicles/4.json"):
+  
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:39:07 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 1.1ms | Allocations: 200)
+  Rendered vehicles/index.json.jbuilder (Duration: 6.2ms | Allocations: 1645)
+Completed 200 OK in 15ms (Views: 6.4ms | ActiveRecord: 1.3ms | Allocations: 3098)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:39:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 1.3ms | Allocations: 428)
+  Rendered vehicles/index.json.jbuilder (Duration: 22.5ms | Allocations: 8513)
+Completed 200 OK in 88ms (Views: 34.6ms | ActiveRecord: 8.7ms | Allocations: 26070)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:39:29 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (1.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 2.1ms | Allocations: 283)
+  Rendered vehicles/index.json.jbuilder (Duration: 10.7ms | Allocations: 1914)
+Completed 200 OK in 59ms (Views: 14.6ms | ActiveRecord: 18.1ms | Allocations: 4029)
+
+
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 12:40:00 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2020", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"4"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms | Allocations: 1482)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started DELETE "/Vehicles/4.json" for ::1 at 2023-09-08 12:40:13 -0500
+  
+ActionController::RoutingError (No route matches [DELETE] "/Vehicles/4.json"):
+  
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:42:34 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 1.0ms | Allocations: 200)
+  Rendered vehicles/index.json.jbuilder (Duration: 7.1ms | Allocations: 1646)
+Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 1.4ms | Allocations: 3103)
+
+
+Started DELETE "/vehicles/4.json" for ::1 at 2023-09-08 12:42:53 -0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for VehiclesController):
+  
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/vehicles/4.json" for ::1 at 2023-09-08 12:43:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/vehicles/4.json"):
+  
+Started GET "/vehicles/4.json" for ::1 at 2023-09-08 12:44:30 -0500
+Processing by VehiclesController#index as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 0.3ms | Allocations: 229)
+  Rendered vehicles/index.json.jbuilder (Duration: 11.6ms | Allocations: 5137)
+Completed 200 OK in 32ms (Views: 9.4ms | ActiveRecord: 6.8ms | Allocations: 12503)
+
+
+Started GET "/vehicles/4.json" for ::1 at 2023-09-08 12:45:04 -0500
+Processing by VehiclesController#index as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 0.5ms | Allocations: 229)
+  Rendered vehicles/index.json.jbuilder (Duration: 20.0ms | Allocations: 5137)
+Completed 200 OK in 47ms (Views: 15.0ms | ActiveRecord: 12.3ms | Allocations: 12413)
+
+
+Started GET "/vehicles/4.json" for ::1 at 2023-09-08 12:45:26 -0500
+Processing by VehiclesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:5:in `show'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 0.7ms | Allocations: 128)
+  Rendered vehicles/show.json.jbuilder (Duration: 2.1ms | Allocations: 421)
+Completed 200 OK in 20ms (Views: 4.8ms | ActiveRecord: 4.7ms | Allocations: 5496)
+
+
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 12:45:55 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2020", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"4"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 990)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:47:27 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 0.4ms | Allocations: 213)
+  Rendered vehicles/index.json.jbuilder (Duration: 6.6ms | Allocations: 3026)
+Completed 200 OK in 44ms (Views: 7.4ms | ActiveRecord: 7.0ms | Allocations: 15069)
+
+
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 12:53:11 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2020", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"4"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 10.6ms | Allocations: 3921)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 12:54:50 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (64.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (3.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 0.8ms | Allocations: 200)
+  Rendered vehicles/index.json.jbuilder (Duration: 18.0ms | Allocations: 1647)
+Completed 200 OK in 128ms (Views: 15.3ms | ActiveRecord: 67.9ms | Allocations: 3108)
+
+
+Started PATCH "/vehicles/$%7Bid%7D.json" for ::1 at 2023-09-08 12:55:03 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2020", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"${id}"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms | Allocations: 977)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started PATCH "/vehicles/$%7Bid%7D.json" for ::1 at 2023-09-08 13:00:45 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2020", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"${id}"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.9ms | Allocations: 6997)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started PATCH "/vehicles/$%7Bid%7D.json" for ::1 at 2023-09-08 13:01:59 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2019", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"${id}"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.4ms | Allocations: 3186)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 13:04:21 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"year"=>"2023", "id"=>"4"}
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 5.4ms | Allocations: 12585)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started PATCH "/vehicles/$%7Bid%7D.json" for ::1 at 2023-09-08 13:05:40 -0500
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for VehiclesController):
+  
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 13:05:57 -0500
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for VehiclesController):
+  
+actionpack (7.0.7.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.7.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.7.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.7.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.7.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.7.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.7.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.7.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.7.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.0.7.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.7) lib/puma/configuration.rb:252:in `call'
+puma (5.6.7) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.7) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.7) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.7) lib/puma/server.rb:443:in `process_client'
+puma (5.6.7) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 13:06:13 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"year"=>"2023", "id"=>"4"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.5ms | Allocations: 4905)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started PATCH "/vehicles/$%7Bid%7D.json" for ::1 at 2023-09-08 13:09:39 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2020", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"${id}"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.5ms | Allocations: 3170)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 13:11:26 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 3.5ms | Allocations: 422)
+  Rendered vehicles/index.json.jbuilder (Duration: 24.8ms | Allocations: 6403)
+Completed 200 OK in 98ms (Views: 26.1ms | ActiveRecord: 27.4ms | Allocations: 17588)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 13:11:27 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 0.7ms | Allocations: 200)
+  Rendered vehicles/index.json.jbuilder (Duration: 6.1ms | Allocations: 1645)
+Completed 200 OK in 22ms (Views: 6.8ms | ActiveRecord: 1.1ms | Allocations: 3083)
+
+
+Started PATCH "/vehicles/$%7Bid%7D.json" for ::1 at 2023-09-08 13:11:41 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2020", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"${id}"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms | Allocations: 1477)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started PATCH "/vehicles/$%7Bid%7D.json" for ::1 at 2023-09-08 13:14:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2019", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"${id}"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 3.1ms | Allocations: 6989)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 13:17:40 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 1.5ms | Allocations: 422)
+  Rendered vehicles/index.json.jbuilder (Duration: 24.8ms | Allocations: 7832)
+Completed 200 OK in 107ms (Views: 28.2ms | ActiveRecord: 24.8ms | Allocations: 18745)
+
+
+Started PATCH "/vehicles/$%7Bvehicle.id%7D.json" for ::1 at 2023-09-08 13:17:53 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/vehicles/$%7Bvehicle.id%7D.json"):
+  
+Started GET "/vehicles.json" for ::1 at 2023-09-08 13:19:40 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.9ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 1.5ms | Allocations: 200)
+  Rendered vehicles/index.json.jbuilder (Duration: 9.5ms | Allocations: 1646)
+Completed 200 OK in 19ms (Views: 10.0ms | ActiveRecord: 1.5ms | Allocations: 3097)
+
+
+Started PATCH "/vehicles/4%20.json" for ::1 at 2023-09-08 13:20:01 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2020", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"4 "}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms | Allocations: 997)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:43:in `update'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 13:20:24 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [6 times] (Duration: 0.5ms | Allocations: 200)
+  Rendered vehicles/index.json.jbuilder (Duration: 4.2ms | Allocations: 1645)
+Completed 200 OK in 10ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 3083)
+
+
+Started PATCH "/vehicles/$%7Bid%7D.json" for ::1 at 2023-09-08 13:35:19 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2020", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"${id}"}
+  [1m[36mVehicle Load (1.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 52.3ms | Allocations: 5896)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:44:in `update'
+Started POST "/sessions.json" for ::1 at 2023-09-08 13:39:57 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"dan@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (124.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dan@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 506ms (Views: 0.4ms | ActiveRecord: 124.0ms | Allocations: 4221)
+
+
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 13:40:59 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"year"=>"2023", "id"=>"4"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms | Allocations: 2578)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:44:in `update'
+Started DELETE "/vehicles/3.json" for ::1 at 2023-09-08 13:42:57 -0500
+Processing by VehiclesController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:55:in `destroy'
+  [1m[36mVehicle Destroy (44.5ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/vehicles_controller.rb:55:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:55:in `destroy'
+Completed 200 OK in 53ms (Views: 0.2ms | ActiveRecord: 46.4ms | Allocations: 2418)
+
+
+Started DELETE "/vehicles/8.json" for ::1 at 2023-09-08 13:43:14 -0500
+Processing by VehiclesController#destroy as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mVehicle Load (0.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:55:in `destroy'
+  [1m[36mVehicle Destroy (0.6ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/vehicles_controller.rb:55:in `destroy'
+  [1m[36mTRANSACTION (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:55:in `destroy'
+Completed 200 OK in 47ms (Views: 0.1ms | ActiveRecord: 41.6ms | Allocations: 2184)
+
+
+Started PATCH "/vehicles/$%7Bid%7D.json" for ::1 at 2023-09-08 13:43:51 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Ford", "model"=>"Mustang II V8", "year"=>"1975", "image_url"=>"http://www.mustangattitude.com/mustang/1976/1976_00021_01.jpg", "id"=>"${id}"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms | Allocations: 967)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:44:in `update'
+Started DELETE "/vehicles/7.json" for ::1 at 2023-09-08 13:44:47 -0500
+Processing by VehiclesController#destroy as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:54:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:55:in `destroy'
+  [1m[36mVehicle Destroy (0.9ms)[0m  [1m[31mDELETE FROM "vehicles" WHERE "vehicles"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/vehicles_controller.rb:55:in `destroy'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:55:in `destroy'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 8.5ms | Allocations: 2184)
+
+
+Started PATCH "/vehicles/$%7Bid%7D.json" for ::1 at 2023-09-08 13:46:00 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Honda", "model"=>"CRV", "year"=>"2024", "image_url"=>"https://www.carscoops.com/wp-content/uploads/2021/08/Honda-CR-V-1.jpg", "id"=>"${id}"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 46.8ms | Allocations: 3190)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:44:in `update'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 13:47:05 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.6ms | Allocations: 142)
+  Rendered vehicles/index.json.jbuilder (Duration: 12.2ms | Allocations: 4291)
+Completed 200 OK in 110ms (Views: 13.0ms | ActiveRecord: 54.1ms | Allocations: 16625)
+
+
+Started PATCH "/vehicles/5.json" for ::1 at 2023-09-08 13:47:11 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Honda", "model"=>"CRV", "year"=>"2023", "image_url"=>"https://www.carscoops.com/wp-content/uploads/2021/08/Honda-CR-V-1.jpg", "id"=>"5"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 980)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:44:in `update'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 13:47:30 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 0.5ms | Allocations: 113)
+  Rendered vehicles/index.json.jbuilder (Duration: 4.6ms | Allocations: 1267)
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.9ms | Allocations: 2705)
+
+
+Started PATCH "/vehicles/$%7Bid%7D.json" for ::1 at 2023-09-08 13:47:38 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Honda", "model"=>"CRV", "year"=>"2022", "image_url"=>"https://www.carscoops.com/wp-content/uploads/2021/08/Honda-CR-V-1.jpg", "id"=>"${id}"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 967)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:44:in `update'
+Started GET "/vehicles/4.json" for ::1 at 2023-09-08 13:48:05 -0500
+Processing by VehiclesController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:5:in `show'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 1.5ms | Allocations: 112)
+  Rendered vehicles/show.json.jbuilder (Duration: 9.3ms | Allocations: 401)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.3ms | Allocations: 1261)
+
+
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 13:48:46 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"year"=>"2023", "make"=>"Honda", "model"=>"Accord", "id"=>"4"}
+  [1m[36mVehicle Load (1.1ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.1ms | Allocations: 979)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:44:in `update'
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 13:54:12 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"year"=>"2023", "make"=>"Honda", "model"=>"Accord", "id"=>"4"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 4.2ms | Allocations: 4905)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:45:in `update'
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 13:55:01 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"year"=>"2023", "make"=>"Honda", "model"=>"Accord", "id"=>"4"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mVehicle Update (2.8ms)[0m  [1m[33mUPDATE "vehicles" SET "year" = $1, "make" = $2, "model" = $3, "updated_at" = $4 WHERE "vehicles"."id" = $5[0m  [["year", 2023], ["make", "Honda"], ["model", "Accord"], ["updated_at", "2023-09-08 18:55:01.932746"], ["id", 4]]
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mTRANSACTION (40.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 0.8ms | Allocations: 1057)
+  Rendered vehicles/show.json.jbuilder (Duration: 1.2ms | Allocations: 1154)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 55.9ms | Allocations: 14898)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: # json.extract! vehicle, :id, :created_at, :updated_at
+    2: # json.url vehicle_url(vehicle, format: :json)
+    3: json.extract! vehicle, :id, :year, :make, :model, :image_url, :created_at, :updated_at
+  
+app/views/vehicles/_vehicle.json.jbuilder:3
+app/views/vehicles/show.json.jbuilder:1
+app/controllers/vehicles_controller.rb:50:in `update'
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 13:57:29 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"year"=>"2023", "make"=>"Honda", "model"=>"Accord", "id"=>"4"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 1.0ms | Allocations: 1189)
+  Rendered vehicles/show.json.jbuilder (Duration: 3.0ms | Allocations: 1464)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.8ms | Allocations: 5250)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: # json.extract! vehicle, :id, :created_at, :updated_at
+    2: # json.url vehicle_url(vehicle, format: :json)
+    3: # json.extract! vehicle, :id, :year, :make, :model, :image_url, :created_at, :updated_at
+    4: json.id vehicle.id
+    5: json.year vehicle.year
+    6: json.make vehicle.make
+    7: json.model vehicle.model
+  
+app/views/vehicles/_vehicle.json.jbuilder:4
+app/views/vehicles/show.json.jbuilder:1
+app/controllers/vehicles_controller.rb:50:in `update'
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 13:58:22 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"year"=>"2023", "make"=>"Honda", "model"=>"Accord", "id"=>"4"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 0.2ms | Allocations: 51)
+  Rendered vehicles/show.json.jbuilder (Duration: 0.5ms | Allocations: 201)
+Completed 200 OK in 44ms (Views: 2.1ms | ActiveRecord: 10.1ms | Allocations: 12419)
+
+
+Started PATCH "/vehicles/$%7Bid%7D.json" for ::1 at 2023-09-08 13:58:38 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Honda", "model"=>"CRV", "year"=>"2022", "image_url"=>"https://www.carscoops.com/wp-content/uploads/2021/08/Honda-CR-V-1.jpg", "id"=>"${id}"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 982)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/vehicles_controller.rb:42:in `update'
+Started GET "/vehicles.json" for ::1 at 2023-09-08 14:00:08 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [3 times] (Duration: 1.5ms | Allocations: 228)
+  Rendered vehicles/index.json.jbuilder (Duration: 8.6ms | Allocations: 2166)
+Completed 200 OK in 24ms (Views: 10.8ms | ActiveRecord: 1.7ms | Allocations: 4645)
+
+
+Started PATCH "/vehicles/5.json" for ::1 at 2023-09-08 14:00:12 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Honda", "model"=>"CRV", "year"=>"2022", "image_url"=>"https://www.carscoops.com/wp-content/uploads/2021/08/Honda-CR-V-1.jpg", "id"=>"5"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mVehicle Update (0.7ms)[0m  [1m[33mUPDATE "vehicles" SET "year" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["year", 2022], ["updated_at", "2023-09-08 19:00:12.449723"], ["id", 5]]
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered vehicles/show.json.jbuilder (Duration: 0.6ms | Allocations: 164)
+Completed 200 OK in 14ms (Views: 1.2ms | ActiveRecord: 2.3ms | Allocations: 3994)
+
+
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 14:02:30 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Honda", "model"=>"Civic", "year"=>"2023", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"4"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mVehicle Update (0.4ms)[0m  [1m[33mUPDATE "vehicles" SET "model" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["model", "Civic"], ["updated_at", "2023-09-08 19:02:30.118745"], ["id", 4]]
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mTRANSACTION (40.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 0.1ms | Allocations: 33)
+  Rendered vehicles/show.json.jbuilder (Duration: 0.5ms | Allocations: 176)
+Completed 200 OK in 61ms (Views: 1.1ms | ActiveRecord: 41.2ms | Allocations: 3983)
+
+
+Started PATCH "/vehicles/4.json" for ::1 at 2023-09-08 14:02:56 -0500
+Processing by VehiclesController#update as JSON
+  Parameters: {"make"=>"Toyota", "model"=>"Camry", "year"=>"2019", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NmPp8fLh2CoGflQGVKcn7QHaE8%26pid%3DApi&f=1&ipt=3949c645fcec0617a79ecba97923d25756bb2a3fedd5d5b2c5ea96366d691eab&ipo=images", "id"=>"4"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:41:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mVehicle Update (0.3ms)[0m  [1m[33mUPDATE "vehicles" SET "year" = $1, "make" = $2, "model" = $3, "updated_at" = $4 WHERE "vehicles"."id" = $5[0m  [["year", 2019], ["make", "Toyota"], ["model", "Camry"], ["updated_at", "2023-09-08 19:02:56.850036"], ["id", 4]]
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:42:in `update'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 0.2ms | Allocations: 33)
+  Rendered vehicles/show.json.jbuilder (Duration: 0.7ms | Allocations: 176)
+Completed 200 OK in 12ms (Views: 1.4ms | ActiveRecord: 1.6ms | Allocations: 4000)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 14:03:07 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 123)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 14:03:07 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started POST "/users.json" for ::1 at 2023-09-08 14:03:40 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Paul", "email"=>"paul@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paul@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "password_digest", "created_at", "updated_at", "vehicle_id", "admin") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "paul@example.com"], ["name", "Paul"], ["password_digest", "[FILTERED]"], ["created_at", "2023-09-08 19:03:40.651942"], ["updated_at", "2023-09-08 19:03:40.651942"], ["vehicle_id", nil], ["admin", false]]
+  ↳ app/controllers/users_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:24:in `create'
+Completed 201 Created in 257ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 4070)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 14:03:41 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 119)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 14:03:41 -0500
+Processing by VehiclesController#index as JSON
+Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 121)
+
+
+Started POST "/sessions.json" for ::1 at 2023-09-08 14:04:04 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"paul@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paul@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 201 Created in 267ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 889)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 14:04:05 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (2.0ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [0 times] (Duration: 0.2ms | Allocations: 27)
+  Rendered vehicles/index.json.jbuilder (Duration: 7.4ms | Allocations: 898)
+Completed 200 OK in 122ms (Views: 6.7ms | ActiveRecord: 8.3ms | Allocations: 2337)
+
+
+Started GET "/vehicles.json" for ::1 at 2023-09-08 14:04:05 -0500
+Processing by VehiclesController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering vehicles/index.json.jbuilder
+  [1m[36mVehicle Load (0.8ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/views/vehicles/index.json.jbuilder:1
+  Rendered collection of vehicles/_vehicle.json.jbuilder [0 times] (Duration: 0.1ms | Allocations: 22)
+  Rendered vehicles/index.json.jbuilder (Duration: 3.8ms | Allocations: 888)
+Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 1.3ms | Allocations: 2327)
+
+
+Started POST "/vehicles.json" for ::1 at 2023-09-08 14:05:04 -0500
+Processing by VehiclesController#create as JSON
+  Parameters: {"year"=>"1965", "make"=>"Ford", "model"=>"Mustang", "image_url"=>"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.jtYZBKlTUPViJ0d3E92rSwHaEO%26pid%3DApi&f=1&ipt=3edace0a2f0c095e762ad7534ec4ab1353a59780c7991fbb839b903c5190589b&ipo=images"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/vehicles_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/vehicles_controller.rb:28:in `create'
+  [1m[36mVehicle Create (0.5ms)[0m  [1m[32mINSERT INTO "vehicles" ("year", "make", "model", "created_at", "updated_at", "user_id", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["year", 1965], ["make", "Ford"], ["model", "Mustang"], ["created_at", "2023-09-08 19:05:04.320893"], ["updated_at", "2023-09-08 19:05:04.320893"], ["user_id", 4], ["image_url", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.jtYZBKlTUPViJ0d3E92rSwHaEO%26pid%3DApi&f=1&ipt=3edace0a2f0c095e762ad7534ec4ab1353a59780c7991fbb839b903c5190589b&ipo=images"]]
+  ↳ app/controllers/vehicles_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/vehicles_controller.rb:28:in `create'
+  Rendering vehicles/show.json.jbuilder
+  Rendered vehicles/_vehicle.json.jbuilder (Duration: 0.2ms | Allocations: 33)
+  Rendered vehicles/show.json.jbuilder (Duration: 1.0ms | Allocations: 176)
+Completed 200 OK in 22ms (Views: 2.1ms | ActiveRecord: 1.6ms | Allocations: 3891)
+
+

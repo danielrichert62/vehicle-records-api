@@ -31,4 +31,28 @@ class VehiclesController < ApplicationController
       render json: { errors: @vehicle.errors.full_messages }, status: :unprocessable_entity
     end
   end
+
+  # def edit
+  #   @vehicle = Vehicle.find_by(id: params[:id])
+  #   render :edit
+  # end
+
+  def update
+    @vehicle = Vehicle.find_by(id: params[:id])
+    @vehicle.update(
+      # user_id: params[:vehicle]["user_id"] || @vehicle.user_id,
+      make: params["make"] || @vehicle.make,
+      model: params["model"] || @vehicle.model,
+      year: params["year"] || @vehicle.year,
+      image_url: params["image_url"] || @vehicle.image_url,
+    )
+    # redirect_to "/vehicles"
+    render :show
+  end
+
+  def destroy
+    vehicle = Vehicle.find_by(id: params["id"])
+    vehicle.destroy
+    render json: { message: "Vehicle removed" }
+  end
 end
