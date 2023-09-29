@@ -32,11 +32,6 @@ class VehiclesController < ApplicationController
     end
   end
 
-  # def edit
-  #   @vehicle = Vehicle.find_by(id: params[:id])
-  #   render :edit
-  # end
-
   def update
     @vehicle = Vehicle.find_by(id: params[:id])
     @vehicle.update(

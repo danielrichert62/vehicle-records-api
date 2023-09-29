@@ -18,5 +18,11 @@ class FuelsController < ApplicationController
     else #sad path
       render json: { errors: @fuel.errors.full_messages }, status: :unprocessable_entity
     end
+
+    def destroy
+      fuel = Fuel.find_by(id: params["id"])
+      fuel.destroy
+      render json: { message: "Fuel record removed" }
+    end
   end
 end
