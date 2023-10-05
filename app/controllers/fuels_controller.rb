@@ -1,4 +1,9 @@
 class FuelsController < ApplicationController
+  def show
+    @fuel = Fuel.find_by(id: params["id"])
+    render :show
+  end
+
   def index
     @fuels = Fuel.all
   end
